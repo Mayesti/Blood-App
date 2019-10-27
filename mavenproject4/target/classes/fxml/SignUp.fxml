@@ -11,25 +11,28 @@
    <children>
       <AnchorPane layoutX="120.0" layoutY="35.0" prefHeight="390.0" prefWidth="367.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 25;">
          <children>
-            <Label layoutX="144.0" layoutY="47.0" text="SIGN UP">
+            <Label layoutX="134.0" layoutY="37.0" text="SIGN UP">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <TextField layoutX="157.0" layoutY="102.0" prefHeight="25.0" prefWidth="182.0" />
+            <TextField fx:id="tfUsername" layoutX="157.0" layoutY="102.0" prefHeight="25.0" prefWidth="182.0" />
             <Text layoutX="85.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username : " />
-            <TextField layoutX="157.0" layoutY="136.0" prefHeight="25.0" prefWidth="182.0" />
+            <TextField fx:id="tfEmail" layoutX="157.0" layoutY="136.0" prefHeight="25.0" prefWidth="182.0" />
             <Text layoutX="113.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
-            <RadioButton layoutX="157.0" layoutY="171.0" mnemonicParsing="false" text="Laki-laki" />
-            <RadioButton layoutX="249.0" layoutY="171.0" mnemonicParsing="false" text="Perempuan" />
+            <RadioButton fx:id="rbPria" layoutX="157.0" layoutY="171.0" mnemonicParsing="false" text="Laki-laki" />
+            <RadioButton fx:id="rbWanita" layoutX="249.0" layoutY="171.0" mnemonicParsing="false" text="Perempuan" />
             <Text layoutX="70.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin : " />
             <Text layoutX="68.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir : " />
             <Text layoutX="89.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " />
-            <TextField layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0" />
             <Text layoutX="28.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
-            <TextField layoutX="157.0" layoutY="269.0" prefHeight="25.0" prefWidth="182.0" />
-            <Button layoutX="149.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="KIRIM" />
-            <DatePicker layoutX="157.0" layoutY="199.0" prefHeight="25.0" prefWidth="182.0" />
+            <Button fx:id="btnRegister" layoutX="149.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="Kirim">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <DatePicker fx:id="dpTgl" layoutX="157.0" layoutY="199.0" prefHeight="25.0" prefWidth="182.0" />
+            <PasswordField fx:id="pfPassword" layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0" />
+            <PasswordField fx:id="pfKonfirm" layoutX="157.0" layoutY="269.0" prefHeight="25.0" prefWidth="182.0" />
          </children>
       </AnchorPane>
    </children>
