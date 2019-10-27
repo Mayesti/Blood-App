@@ -26,7 +26,7 @@
             <Text layoutX="68.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir : " />
             <Text layoutX="89.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " />
             <Text layoutX="28.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
-            <Button fx:id="btnRegister" layoutX="149.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="Kirim">
+            <Button fx:id="btnRegister" layoutX="149.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="Kirim">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
