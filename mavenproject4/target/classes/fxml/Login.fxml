@@ -15,7 +15,7 @@
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <Button id="btnLogin" layoutX="145.0" layoutY="262.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="36.0" prefWidth="69.0" style="-fx-background-color: #800000; -fx-background-radius: 50;" text="Login" textFill="WHITE">
+            <Button id="btnLogin" layoutX="145.0" layoutY="284.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="36.0" prefWidth="69.0" style="-fx-background-color: #800000; -fx-background-radius: 50;" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font></Button>
@@ -23,13 +23,21 @@
                <font>
                   <Font size="14.0" />
                </font></PasswordField>
+<<<<<<< HEAD
             <Label layoutX="95.0" layoutY="335.0" text="Belum punya akun?" />
             <Button fx:id="btnDaftar" layoutX="206.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnSignUp" text="Sign Up" />
+=======
+            <Label layoutX="95.0" layoutY="353.0" text="Belum punya akun?" />
+            <Button fx:id="btnDaftar" layoutX="206.0" layoutY="349.0" mnemonicParsing="false" onAction="#btnSignUp" text="Sign Up" />
+>>>>>>> d5a0580fd7674b4250b286388090ff560e8a8701
             <Label layoutX="117.0" layoutY="53.0" text="Blood App">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font></Label>
-            <Label fx:id="pesan" layoutX="70.0" layoutY="298.0" prefHeight="27.0" prefWidth="219.0" />
+            <Label fx:id="pesan" layoutX="73.0" layoutY="237.0" prefHeight="27.0" prefWidth="213.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
          </children>
       </AnchorPane>
    </children>
