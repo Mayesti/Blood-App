@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="450.0" style="-fx-background-color: #8B0000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.apps.FXMLController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label fx:id="usernamedisplay" layoutX="27.0" layoutY="153.0" prefHeight="27.0" prefWidth="59.0" />
+      <Label layoutX="132.0" layoutY="33.0" text="ANALISIS DATA" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="33.0" layoutY="111.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="174.0" text="List Makanan">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Button layoutX="241.0" layoutY="111.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="174.0" text="Resiko Penyakit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="33.0" layoutY="222.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="174.0" text="Olahraga">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="241.0" layoutY="222.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="174.0" text="Cara Penanganan">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
