@@ -28,11 +28,7 @@
             <Text layoutX="28.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
             <Button fx:id="btnRegister" layoutX="149.0" layoutY="325.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="Kirim">
                <font>
-<<<<<<< HEAD
-                  <Font name="System Bold" size="15.0" />
-=======
                   <Font name="System Bold" size="14.0" />
->>>>>>> d5a0580fd7674b4250b286388090ff560e8a8701
                </font></Button>
             <DatePicker fx:id="dpTgl" layoutX="157.0" layoutY="199.0" prefHeight="25.0" prefWidth="182.0" />
             <PasswordField fx:id="pfPassword" layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0" />
