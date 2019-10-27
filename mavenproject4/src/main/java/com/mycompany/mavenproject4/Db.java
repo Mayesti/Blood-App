@@ -37,14 +37,7 @@ public class Db {
             System.out.println(e.getMessage());
         }
         }
-//            Class.forName("org.sqlite.JDBC");
-//            Connection conn =DriverManager.getConnection("jdbc:sqlite:logiin.db");
-//            return conn;
-//        } catch (Exception e) {
-//            System.out.println(e);
-//            return null;
-//            // TODO: handle exception
-//        }
+
     }
 }
 
