@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #800000;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.UbahPassController">
+    <stylesheets>
+        <URL value="@/styles/ubahpass.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="133.0" layoutY="35.0" prefHeight="319.0" prefWidth="322.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="74.0" layoutY="27.0" text="UBAH PASSWORD">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Text layoutX="30.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+            <TextField layoutX="132.0" layoutY="85.0" />
+            <TextField layoutX="132.0" layoutY="139.0" />
+            <Text layoutX="26.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password Lama" />
+            <TextField layoutX="132.0" layoutY="186.0" />
+            <Text layoutX="28.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password Baru" />
+            <Button layoutX="138.0" layoutY="248.0" mnemonicParsing="false" text="KIRIM" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
