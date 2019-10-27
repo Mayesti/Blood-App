@@ -65,11 +65,15 @@ public class LogiinController implements Initializable {
             window.show();
         } else {
                 if(usern.equals(" ") && pass.equals(" ")){
-                    pesan.setText("username dan password harus diisi!");
+                    pesan.setText("Username dan Password harus diisi!");
                 }
-                else if(usern.equals("")){
-                    pesan.setText("username kosong");
+                else if(usern.equals("") || pass.equals(" ")){
+                    pesan.setText("Username atau Password harus diisi!");
                 }
+                else{
+                    pesan.setText("Password atau Username salah!");
+            }
+                
         }
 
     }
