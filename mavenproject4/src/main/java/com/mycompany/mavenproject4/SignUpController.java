@@ -89,12 +89,13 @@ public class SignUpController implements Initializable {
                 int q = p.executeUpdate(insert);
                 if(q == 1){
                 System.out.println("Berhasil");
+                falsePass.setText(" ");
                 }   else{
                 System.out.println("Gagal");
                 }
                 }
             else {
-                falsePass.setText("Password dan Konfirmasi Password harus sama");
+                falsePass.setText("Password dan konfirmasi password harus sama!");
             }
             
                 
