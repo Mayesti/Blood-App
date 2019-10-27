@@ -64,10 +64,10 @@ public class LogiinController implements Initializable {
             window.setScene(scene);
             window.show();
         } else {
-                if(usern.equals("") && pass.equals("")){
+                if(usern.equals(" ") && pass.equals(" ")){
                     pesan.setText("Username dan Password harus diisi!");
                 }
-                else if(usern.equals("") || pass.equals("")){
+                else if(usern.equals("") || pass.equals(" ")){
                     pesan.setText("Username atau Password harus diisi!");
                 }
                 else{
