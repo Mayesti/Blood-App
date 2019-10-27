@@ -11,7 +11,7 @@
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Label fx:id="usernamedisplay" layoutX="27.0" layoutY="153.0" prefHeight="27.0" prefWidth="59.0" />
-      <Label layoutX="111.0" layoutY="23.0" text="BLOOD APPS">
+      <Label layoutX="111.0" layoutY="23.0" text="BLOOD APPS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
