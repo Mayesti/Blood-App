@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
@@ -50,7 +51,7 @@ public class SignUpController implements Initializable {
      */
     
     @FXML
-    void signup(MouseEvent event) throws SQLException{
+    void signup(ActionEvent event) throws SQLException{
         
             String username = tfUsername.getText();
             String email = tfEmail.getText();

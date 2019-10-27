@@ -16,7 +16,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField layoutX="157.0" layoutY="102.0" prefHeight="25.0" prefWidth="182.0" />
+            <TextField fx:id="tfUsername" layoutX="157.0" layoutY="102.0" prefHeight="25.0" prefWidth="182.0" />
             <Text layoutX="85.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username : " />
             <TextField layoutX="157.0" layoutY="136.0" prefHeight="25.0" prefWidth="182.0" />
             <Text layoutX="113.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
@@ -26,7 +26,7 @@
             <Text layoutX="68.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir : " />
             <Text layoutX="89.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " />
             <Text layoutX="28.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
-            <Button layoutX="149.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#signup" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="KIRIM" />
+            <Button layoutX="149.0" layoutY="325.0" mnemonicParsing="false" onAction="#signup" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="KIRIM" />
             <DatePicker layoutX="157.0" layoutY="199.0" prefHeight="25.0" prefWidth="182.0" />
             <PasswordField fx:id="pfPassword" layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0" />
             <PasswordField fx:id="pfKonfirm" layoutX="157.0" layoutY="269.0" prefHeight="25.0" prefWidth="182.0" />

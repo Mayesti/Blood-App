@@ -21,7 +21,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="133.0" layoutY="173.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" text="Riwayat Data">
+      <Button layoutX="133.0" layoutY="173.0" mnemonicParsing="false" onAction="#btnHistory" prefHeight="39.0" prefWidth="185.0" text="Riwayat Data">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

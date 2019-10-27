@@ -79,7 +79,7 @@ public class LogiinController implements Initializable {
     }
     
     @FXML
-    public void btnSignUp(ActionEvent event) throws IOException, SQLException{
+    void btnSignUp(ActionEvent event) throws IOException, SQLException{
 //        System.out.println("clicked");
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SignUp.fxml"));
