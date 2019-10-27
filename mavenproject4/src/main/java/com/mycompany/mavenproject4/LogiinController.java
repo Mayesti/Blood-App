@@ -32,7 +32,6 @@ import javafx.stage.Stage;
  */
 public class LogiinController implements Initializable {
     @FXML
-    private Label label;
     private Label pesan;
    
     @FXML
@@ -43,7 +42,7 @@ public class LogiinController implements Initializable {
     private Connection conn=null;
     
     @FXML
-    private void btnLogin(ActionEvent event) throws IOException, SQLException{
+    private void btnLogin(ActionEvent event) throws SQLException, IOException{
 //        System.out.println("clicked btn login");
         String usern = tfUsername.getText();
         String pass = pfPassword.getText();
@@ -53,12 +52,12 @@ public class LogiinController implements Initializable {
             Statement p = conn.createStatement();
             System.out.println(usern);
             System.out.println(pass);
-            String query = "select *from user WHERE username = '"+usern+"' AND password = '"+pass+"'";
+            String query = "select *from user WHERE Username = '"+usern+"' AND Password = '"+pass+"'";
             ResultSet q = p.executeQuery(query);
             
             if(q.next()){
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
-            Scene scene = new Scene(root);
+            Parent root=FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
+            Scene scene=new Scene(root);
             scene.getStylesheets().add("/style/Style.css");
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
             window.setScene(scene);

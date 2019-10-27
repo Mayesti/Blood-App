@@ -23,7 +23,7 @@ public class Db {
             Statement p = conn.createStatement();
             System.out.println(user);
             System.out.println(pass);
-            String query = "select *from user WHERE username = "+user+" AND password = "+pass+"";
+            String query = "select *from user WHERE username = '"+user+"' AND password = '"+pass+"'";
             
             
         }catch (SQLException e){
