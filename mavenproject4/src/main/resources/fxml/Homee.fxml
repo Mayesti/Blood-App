@@ -16,7 +16,7 @@
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="133.0" layoutY="101.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" text="Tambah  Data">
+      <Button layoutX="133.0" layoutY="101.0" mnemonicParsing="false" onAction="#btntambah" prefHeight="39.0" prefWidth="185.0" text="Tambah  Data">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

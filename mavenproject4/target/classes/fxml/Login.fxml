@@ -7,7 +7,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.LoginController">
     <children>
       <AnchorPane prefHeight="399.0" prefWidth="359.0" style="-fx-background-color: #fecccc;">
@@ -24,8 +23,8 @@
                <font>
                   <Font size="14.0" />
                </font></PasswordField>
-            <Label layoutX="97.0" layoutY="336.0" text="Belum punya akun?" />
-            <Button fx:id="btnDaftar" layoutX="208.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnSignUp" text="SignUp" />
+            <Label layoutX="95.0" layoutY="335.0" text="Belum punya akun?" />
+            <Button fx:id="btnDaftar" layoutX="206.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnSignUp" text="Sign Up" />
             <Label layoutX="117.0" layoutY="53.0" text="Blood App">
                <font>
                   <Font name="System Bold" size="25.0" />
