@@ -23,6 +23,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -34,6 +35,9 @@ import javafx.stage.Stage;
  * @author Mayesti
  */
 public class SignUpController implements Initializable {
+    
+    @FXML
+    private Label falsePass;
     
     @FXML
     private TextField tfUsername;
@@ -74,19 +78,27 @@ public class SignUpController implements Initializable {
         String konfirm = pfKonfirm.getText();
         
             
+        
             String url = "jdbc:sqlite:logiin.db";
             con = DriverManager.getConnection(url);
             Statement p = con.createStatement();
 //            System.out.println(usern);
 //            System.out.println(pass);
             String insert = "insert into user (username, password, email, tgl_lahir, jenis_kelamin) values ('"+username+"','"+password+"','"+email+"','"+tgl+"','"+gender+"')";
-            int q = p.executeUpdate(insert);
-                
-            if(q == 1){
+            if(password.equals(konfirm)){
+                int q = p.executeUpdate(insert);
+                if(q == 1){
                 System.out.println("Berhasil");
-            }else{
+                }   else{
                 System.out.println("Gagal");
+                }
+                }
+            else {
+                falsePass.setText("Password dan Konfirmasi Password harus sama");
             }
+            
+                
+            
             
                 
         } 
