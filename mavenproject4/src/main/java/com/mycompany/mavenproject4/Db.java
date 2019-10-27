@@ -17,9 +17,9 @@ import java.sql.Statement;
  */
 public class Db {
     
-    private Db(){
-        
-    }
+//    private Db(){
+//        
+//    }
 
     /**
      *

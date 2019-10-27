@@ -25,11 +25,11 @@
             <Text layoutX="70.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin : " />
             <Text layoutX="68.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir : " />
             <Text layoutX="89.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " />
-            <TextField layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0" />
             <Text layoutX="28.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
-            <TextField layoutX="157.0" layoutY="269.0" prefHeight="25.0" prefWidth="182.0" />
-            <Button layoutX="149.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="KIRIM" />
+            <Button layoutX="149.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#signup" prefHeight="30.0" prefWidth="82.0" style="-fx-background-radius: 50;" text="KIRIM" />
             <DatePicker layoutX="157.0" layoutY="199.0" prefHeight="25.0" prefWidth="182.0" />
+            <PasswordField fx:id="pfPassword" layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0" />
+            <PasswordField fx:id="pfKonfirm" layoutX="157.0" layoutY="269.0" prefHeight="25.0" prefWidth="182.0" />
          </children>
       </AnchorPane>
    </children>

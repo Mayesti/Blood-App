@@ -56,7 +56,7 @@ public class LogiinController implements Initializable {
             String query = "select *from user WHERE username = '"+usern+"' AND password = '"+pass+"'";
             ResultSet q = p.executeQuery(query);
             
-            if(q.next()){
+        if(q.next()){
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/style/Style.css");
@@ -79,7 +79,7 @@ public class LogiinController implements Initializable {
     }
     
     @FXML
-    private void btnSignUp(ActionEvent event) throws IOException, SQLException{
+    public void btnSignUp(ActionEvent event) throws IOException, SQLException{
 //        System.out.println("clicked");
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SignUp.fxml"));

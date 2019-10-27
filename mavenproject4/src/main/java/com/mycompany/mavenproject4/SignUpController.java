@@ -9,6 +9,10 @@ package com.mycompany.mavenproject4;
 import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -30,7 +34,10 @@ public class SignUpController implements Initializable {
     private TextField tfEmail;
     
     @FXML
-    private RadioButton rbGender;
+    private RadioButton rbPria;
+    
+    @FXML
+    private RadioButton rbWanita;
     
     @FXML
     private PasswordField pfPassword;
@@ -43,7 +50,26 @@ public class SignUpController implements Initializable {
      */
     
     @FXML
-    void signup(MouseEvent event){
+    void signup(MouseEvent event) throws SQLException{
+        
+            String username = tfUsername.getText();
+            String email = tfEmail.getText();
+            String password = pfPassword.getText();
+            String tgl = dpTanggal.getTypeSelector();
+            String gender;
+            if(rbPria.isSelected()){
+                 gender = "L";
+            }else{
+                 gender = "P";
+            }
+            
+            Connection con = null;
+            String url = "jdbc:sqlite:logiin.db";
+            con = DriverManager.getConnection(url);
+            Statement p = con.createStatement();
+            
+            String query = "insert into user (username, email, jenis kelamin, tanggal lahir, password) values ('"+username+"','"+email+"','"+gender+"','"+tgl+"','"+password+"')";
+            ResultSet q = p.executeQuery(query);     
         
     }
     
