@@ -5,6 +5,7 @@
  */
 package com.mycompany.mavenproject4;
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -15,7 +16,21 @@ import java.sql.Statement;
  * @author Mayesti
  */
 public class Db {
-    private Connection conn=null;
+    
+    private Db(){
+        
+    }
+
+    /**
+     *
+     * @return
+     */
+    public Db getInstance() {
+        return new Db();
+    }
+    
+    private Connection conn = null;
+    
     public void Connection(String user, String pass){ 
         try {
             String url = "jdbc:sqlite:logiin.db";
@@ -30,7 +45,7 @@ public class Db {
             System.out.println(e.getMessage());
         }finally{
             try{
-                if(conn !=null){
+                if(conn != null){
                     conn.close();
                 }
             }catch (SQLException e){
@@ -45,6 +60,10 @@ public class Db {
 //            return null;
 //            // TODO: handle exception
 //        }
+    }
+
+    Connection Connection(Type String) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 
