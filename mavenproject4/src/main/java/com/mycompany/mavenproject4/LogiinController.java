@@ -31,7 +31,7 @@ import javafx.stage.Stage;
  * @author My Computer
  */
 public class LogiinController implements Initializable {
-    @FXML
+@FXML
     private Label label;
     private Label pesan;
    
@@ -77,15 +77,6 @@ public class LogiinController implements Initializable {
     @FXML
     private void btnSignUp(ActionEvent event) throws IOException, SQLException{
 //        System.out.println("clicked");
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SignUp.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));  
-            stage.show();
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
     }
     /**
      * Initializes the controller class.
