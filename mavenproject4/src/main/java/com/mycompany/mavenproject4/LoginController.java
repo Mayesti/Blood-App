@@ -69,13 +69,13 @@ public class LoginController implements Initializable {
             window.show();
         } else {
                 if(usern.equals("") && pass.equals("")){
-                    pesan.setText("Username dan Password harus diisi!");
+                    pesan.setText("Username dan password harus diisi!");
                 }
                 else if(usern.equals("") || pass.equals("")){
-                    pesan.setText("Username atau Password harus diisi!");
+                    pesan.setText("Username atau password harus diisi!");
                 }
                 else{
-                    pesan.setText("Password atau Username salah!");
+                    pesan.setText("Password atau username salah!");
             }
                 
         }
