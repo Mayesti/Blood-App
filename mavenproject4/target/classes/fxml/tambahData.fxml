@@ -7,9 +7,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="450.0" style="-fx-background-color: #8B0000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.test.apps.FXMLController">
-    <children>
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="450.0" style="-fx-background-color: #8B0000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.TambahDataController">
+   <children>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Label fx:id="usernamedisplay" layoutX="27.0" layoutY="153.0" prefHeight="27.0" prefWidth="59.0" />
       <Label layoutX="133.0" layoutY="24.0" text="TAMBAH DATA" textFill="WHITE">
          <font>
@@ -27,6 +27,7 @@
       <Button layoutX="315.0" layoutY="353.0" mnemonicParsing="false" text="Tambah ">
          <font>
             <Font name="System Bold" size="18.0" />
-         </font></Button>
-    </children>
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

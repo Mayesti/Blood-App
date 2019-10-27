@@ -2,6 +2,7 @@ com\mycompany\mavenproject4\HomeController.class
 com\mycompany\mavenproject4\SignUpController.class
 com\mycompany\mavenproject4\LogiinController.class
 com\mycompany\mavenproject4\UbahPassController.class
+com\mycompany\mavenproject4\TambahDataController.class
 com\mycompany\mavenproject4\Db.class
 com\mycompany\mavenproject4\MainApp.class
 com\mycompany\mavenproject4\LupaPassController.class
