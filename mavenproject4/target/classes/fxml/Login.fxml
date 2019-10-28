@@ -16,17 +16,29 @@
             <TextField id="username" fx:id="tfUsername" layoutX="74.0" layoutY="176.0" prefHeight="36.0" prefWidth="219.0" promptText="Username">
                <font>
                   <Font size="14.0" />
-               </font></TextField>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
             <Button id="btnLogin" layoutX="221.0" layoutY="297.0" mnemonicParsing="false" onAction="#btnLogin" prefHeight="36.0" prefWidth="69.0" style="-fx-background-color: #800000; -fx-background-radius: 50;" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
-               </font></Button>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <PasswordField fx:id="pfPassword" layoutX="74.0" layoutY="228.0" prefHeight="36.0" prefWidth="219.0" promptText="Password">
                <font>
                   <Font size="14.0" />
-               </font></PasswordField>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></PasswordField>
             <Label layoutX="99.0" layoutY="365.0" text="Belum punya akun?" />
-            <Button fx:id="btnDaftar" layoutX="210.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnSignUp" text="Sign Up" />
+            <Button fx:id="btnDaftar" layoutX="210.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnSignUp" text="Sign Up">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
             <Label fx:id="pesan" layoutX="77.0" layoutY="264.0" prefHeight="27.0" prefWidth="213.0" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="System Bold" size="12.0" />
