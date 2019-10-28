@@ -87,6 +87,13 @@ public class SignUpController implements Initializable {
             if(password.equals(konfirm)){
                 int q = p.executeUpdate(insert);
                 if(q == 1){
+                    Parent root = FXMLLoader.load(getClass().getResource("/fxml/Homee.fxml"));
+                    Scene scene = new Scene(root);
+                    scene.getStylesheets().add("/style/Style.css");
+                    Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                    window.setScene(scene);
+                    window.show();
+                    
                     System.out.println("Berhasil");
                     falsePass.setText(" ");
                     

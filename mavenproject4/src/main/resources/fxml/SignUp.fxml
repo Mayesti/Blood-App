@@ -43,7 +43,7 @@
                </cursor></Button>
             <DatePicker fx:id="dpTgl" layoutX="157.0" layoutY="199.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
-                  <Cursor fx:constant="TEXT" />
+                  <Cursor fx:constant="DEFAULT" />
                </cursor></DatePicker>
             <PasswordField fx:id="pfPassword" layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
