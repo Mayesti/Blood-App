@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,34 +8,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="450.0" style="-fx-background-color: #8B0000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.HomeeController">
+<AnchorPane id="AnchorPane" prefHeight="437.0" prefWidth="450.0" style="-fx-background-color: #8B0000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.HomeeController">
     <children>
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Label fx:id="usernamedisplay" layoutX="27.0" layoutY="153.0" prefHeight="27.0" prefWidth="59.0" />
-      <Label layoutX="111.0" layoutY="23.0" text="BLOOD APPS" textFill="WHITE">
+      <Label layoutX="111.0" layoutY="17.0" text="BLOOD APPS" textFill="WHITE">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="133.0" layoutY="101.0" mnemonicParsing="false" onAction="#btntambah" prefHeight="39.0" prefWidth="185.0" text="Tambah  Data">
+      <Button blendMode="HARD_LIGHT" layoutX="133.0" layoutY="147.0" mnemonicParsing="false" onAction="#btntambah" prefHeight="39.0" prefWidth="185.0" text="Tambah  Data">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="133.0" layoutY="173.0" mnemonicParsing="false" onAction="#btnRiwayat" prefHeight="39.0" prefWidth="185.0" text="Riwayat Data">
+      <Button blendMode="HARD_LIGHT" layoutX="133.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnRiwayat" prefHeight="39.0" prefWidth="185.0" text="Riwayat Data">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="133.0" layoutY="244.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" text="Analisis Data">
+      <Button blendMode="HARD_LIGHT" layoutX="133.0" layoutY="290.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" style="-fx-border-radius: 30;" text="Analisis Data">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="133.0" layoutY="316.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="185.0" text="Grafik">
+      <Button blendMode="HARD_LIGHT" layoutX="133.0" layoutY="362.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="185.0" text="Grafik">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
+      <ImageView fitHeight="61.0" fitWidth="69.0" layoutX="191.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@blood-donation-pngrepo-com.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
