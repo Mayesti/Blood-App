@@ -76,8 +76,7 @@ public class SignUpController implements Initializable {
         }
         String password = pfPassword.getText();
         String konfirm = pfKonfirm.getText();
-        
-            
+                 
         
             String url = "jdbc:sqlite:logiin.db";
             con = DriverManager.getConnection(url);
@@ -88,12 +87,13 @@ public class SignUpController implements Initializable {
             if(password.equals(konfirm)){
                 int q = p.executeUpdate(insert);
                 if(q == 1){
-                System.out.println("Berhasil");
-                falsePass.setText(" ");
-                }   else{
-                System.out.println("Gagal");
+                    System.out.println("Berhasil");
+                    falsePass.setText(" ");
+                    
+                }else{
+                    System.out.println("Gagal");
                 }
-                }
+            }
             else {
                 falsePass.setText("Password dan konfirmasi password harus sama!");
             }
