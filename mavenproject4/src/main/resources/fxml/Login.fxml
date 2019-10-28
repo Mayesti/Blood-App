@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -26,7 +27,7 @@
                </font></PasswordField>
             <Label layoutX="99.0" layoutY="365.0" text="Belum punya akun?" />
             <Button fx:id="btnDaftar" layoutX="210.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnSignUp" text="Sign Up" />
-            <Label fx:id="pesan" layoutX="77.0" layoutY="270.0" prefHeight="27.0" prefWidth="213.0" textAlignment="CENTER">
+            <Label fx:id="pesan" layoutX="77.0" layoutY="264.0" prefHeight="27.0" prefWidth="213.0" textAlignment="CENTER" textFill="RED">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
@@ -41,15 +42,18 @@
                </image>
             </ImageView>
          </children>
+         <effect>
+            <DropShadow />
+         </effect>
       </AnchorPane>
       <AnchorPane prefHeight="400.0" prefWidth="227.0">
          <children>
-            <Label layoutX="46.0" layoutY="141.0" text="Blood App" textFill="WHITE">
+            <Label layoutX="40.0" layoutY="143.0" text="Blood App" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="27.0" />
+                  <Font name="Forte" size="30.0" />
                </font>
             </Label>
-            <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="74.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="74.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@blood-donation-pngrepo-com.png" />
                </image>
