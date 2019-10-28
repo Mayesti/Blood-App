@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #800000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.SignUpController">
    <children>
-      <AnchorPane layoutX="226.0" prefHeight="400.0" prefWidth="367.0" style="-fx-background-color: #fecccc; -fx-background-radius: 0;">
+      <AnchorPane layoutX="233.0" prefHeight="400.0" prefWidth="367.0" style="-fx-background-color: #fecccc; -fx-background-radius: 0;">
          <children>
             <Label layoutX="28.0" layoutY="23.0" text="Create Account">
                <font>
@@ -43,7 +43,7 @@
                </cursor></Button>
             <DatePicker fx:id="dpTgl" layoutX="157.0" layoutY="199.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
-                  <Cursor fx:constant="TEXT" />
+                  <Cursor fx:constant="DEFAULT" />
                </cursor></DatePicker>
             <PasswordField fx:id="pfPassword" layoutX="157.0" layoutY="234.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
@@ -67,14 +67,14 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="227.0">
+      <AnchorPane prefHeight="400.0" prefWidth="234.0">
          <children>
-            <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="74.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="78.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@blood-donation-pngrepo-com.png" />
                </image>
             </ImageView>
-            <Label layoutX="40.0" layoutY="143.0" text="Blood App" textFill="WHITE">
+            <Label layoutX="44.0" layoutY="143.0" text="Blood App" textFill="WHITE">
                <font>
                   <Font name="Forte" size="30.0" />
                </font>

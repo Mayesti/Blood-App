@@ -11,7 +11,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #800000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.LoginController">
     <children>
-      <AnchorPane layoutX="226.0" prefHeight="400.0" prefWidth="367.0" style="-fx-background-color: #fecccc;">
+      <AnchorPane layoutX="233.0" prefHeight="400.0" prefWidth="367.0" style="-fx-background-color: #fecccc;">
          <children>
             <TextField id="username" fx:id="tfUsername" layoutX="74.0" layoutY="176.0" prefHeight="36.0" prefWidth="219.0" promptText="Username">
                <font>
@@ -58,14 +58,14 @@
             <DropShadow />
          </effect>
       </AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="227.0">
+      <AnchorPane prefHeight="400.0" prefWidth="233.0">
          <children>
-            <Label layoutX="40.0" layoutY="143.0" text="Blood App" textFill="WHITE">
+            <Label layoutX="43.0" layoutY="143.0" text="Blood App" textFill="WHITE">
                <font>
                   <Font name="Forte" size="30.0" />
                </font>
             </Label>
-            <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="74.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="77.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@blood-donation-pngrepo-com.png" />
                </image>
