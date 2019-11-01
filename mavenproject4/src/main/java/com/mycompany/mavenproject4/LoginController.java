@@ -86,7 +86,7 @@ public class LoginController implements Initializable {
     private void btnSignUp(ActionEvent event) throws IOException, SQLException{
 //        System.out.println("clicked");
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/menu.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SignUp.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));  
