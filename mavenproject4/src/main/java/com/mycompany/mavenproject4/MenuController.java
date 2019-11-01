@@ -46,7 +46,16 @@ public class MenuController implements Initializable {
 
     @FXML
     private void btnriwayat(ActionEvent event){
-
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/History.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
     }
 
     @FXML

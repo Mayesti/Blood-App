@@ -17,6 +17,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  * FXML Controller class
@@ -30,13 +31,17 @@ public class HistoryController implements Initializable {
      */
     
     @FXML
-    private void btnKembali(ActionEvent event) throws IOException{
-        Parent root=FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Style.css");
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(scene);
-        window.show();
+    private void btnBack(ActionEvent event) throws IOException{
+       try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
