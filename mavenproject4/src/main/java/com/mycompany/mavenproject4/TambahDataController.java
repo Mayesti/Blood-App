@@ -58,6 +58,9 @@ public class TambahDataController implements Initializable {
     @FXML
     private Button btnTambahData;
     
+    @FXML
+    private Button btnback;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         SpinnerValueFactory<Integer> valueFactorySistol=new SpinnerValueFactory.IntegerSpinnerValueFactory(0,1000,0);
@@ -74,6 +77,15 @@ public class TambahDataController implements Initializable {
         spntinggi.setValueFactory(valueFactoryTinggi);
     }
     
+    @FXML
+    void btnback(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/style/Style.css");
+        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
     @FXML
     void btnTambahData(ActionEvent event) throws IOException {
         String username=UserLogin.username;
