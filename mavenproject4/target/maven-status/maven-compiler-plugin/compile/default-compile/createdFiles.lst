@@ -6,12 +6,9 @@ com\mycompany\mavenproject4\MenuController.class
 com\mycompany\mavenproject4\MainApp.class
 com\mycompany\mavenproject4\LupaPassController.class
 com\mycompany\mavenproject4\Model.class
-<<<<<<< HEAD
 com\mycompany\mavenproject4\UserLogin.class
-com\mycompany\mavenproject4\HomeeController.class
-=======
->>>>>>> 80680b0959032de31bb39aa3a78c60d0e21b2ca7
 com\mycompany\mavenproject4\SignUpController.class
 com\mycompany\mavenproject4\HistoryController.class
 com\mycompany\mavenproject4\TambahDataController.class
+com\mycompany\mavenproject4\DataRiwayat.class
 com\mycompany\mavenproject4\Db.class

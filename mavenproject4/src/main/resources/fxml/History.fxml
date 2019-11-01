@@ -27,15 +27,15 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <TableView layoutX="28.0" layoutY="82.0" prefHeight="309.0" prefWidth="744.0">
+            <TableView fx:id="tvRiwayat" layoutX="32.0" layoutY="82.0" prefHeight="309.0" prefWidth="744.0">
               <columns>
-                <TableColumn prefWidth="142.0" text="Tanggal" />
-                <TableColumn prefWidth="90.0" text="Sistolik" />
-                  <TableColumn prefWidth="94.0" text="Diastolik" />
-                  <TableColumn prefWidth="91.0" text="Pulse" />
-                  <TableColumn prefWidth="119.0" text="Kadar Gula Darah" />
-                  <TableColumn minWidth="0.0" prefWidth="101.0" text="Berat Badan" />
-                  <TableColumn prefWidth="106.0" text="Tinggi Badan" />
+                <TableColumn fx:id="columnTanggal" prefWidth="142.0" text="Tanggal" />
+                <TableColumn fx:id="columnSistolik" prefWidth="90.0" text="Sistolik" />
+                  <TableColumn fx:id="columnDiastolik" prefWidth="94.0" text="Diastolik" />
+                  <TableColumn fx:id="columnPulse" prefWidth="91.0" text="Pulse" />
+                  <TableColumn fx:id="columnKadarGulaDarah" prefWidth="119.0" text="Kadar Gula Darah" />
+                  <TableColumn fx:id="columnBeratBadan" minWidth="0.0" prefWidth="101.0" text="Berat Badan" />
+                  <TableColumn fx:id="columnTinggiBadan" prefWidth="106.0" text="Tinggi Badan" />
               </columns>
             </TableView>
          </children>
