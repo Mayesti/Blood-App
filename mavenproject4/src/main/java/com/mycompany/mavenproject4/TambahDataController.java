@@ -21,6 +21,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
@@ -61,6 +62,9 @@ public class TambahDataController implements Initializable {
     @FXML
     private Button btnback;
     
+    @FXML
+    private Label lbnama;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         SpinnerValueFactory<Integer> valueFactorySistol=new SpinnerValueFactory.IntegerSpinnerValueFactory(0,1000,0);
@@ -75,6 +79,8 @@ public class TambahDataController implements Initializable {
         spngula.setValueFactory(valueFactoryGula);
         spnberat.setValueFactory(valueFactoryBerat);
         spntinggi.setValueFactory(valueFactoryTinggi);
+        String username = UserLogin.username;
+        lbnama.setText("Selamat Datang, " + username);
     }
     
     @FXML

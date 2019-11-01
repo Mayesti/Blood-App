@@ -43,8 +43,10 @@ public class LoginController implements Initializable {
 
     @FXML
     private PasswordField pfPassword;
-
     
+    @FXML
+    private Label lbnama;
+     
     @FXML
     private void btnLogin(ActionEvent event) throws SQLException, IOException{
 //        System.out.println("clicked btn login");
@@ -62,6 +64,7 @@ public class LoginController implements Initializable {
             UserLogin.username=q.getString("username");
             UserLogin.nama=q.getString("nama");
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
+            
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/style/Style.css");
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

@@ -56,5 +56,6 @@
             <Image url="@blood-donation-pngrepo-com.png" />
          </image>
       </ImageView>
+      <Label fx:id="lbnama" layoutX="562.0" layoutY="21.0" prefHeight="27.0" prefWidth="165.0" textFill="WHITE" />
    </children>
 </AnchorPane>
