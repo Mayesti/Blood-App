@@ -13,9 +13,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  * FXML Controller class
@@ -28,20 +30,22 @@ public class MenuController implements Initializable {
      * Initializes the controller class.
      */
     @FXML
-    private void btntambah(ActionEvent event) throws IOException, SQLException{
+    private void btntambahdata(ActionEvent event){
+        //showMessageDialog(null,"tes");
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/menuTambahData1.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));  
-            stage.show();
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/menuTambahData1.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
         } catch(Exception e) {
-            e.printStackTrace();
+            showMessageDialog(null,e.getMessage());
         }
     }
 
     @FXML
-    private void btnriwayat(ActionEvent event) throws IOException, SQLException{
+    private void btnriwayat(ActionEvent event){
 
     }
 

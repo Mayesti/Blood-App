@@ -17,7 +17,7 @@
                   <Image url="@blood-donation-pngrepo-com.png" />
                </image>
             </ImageView>
-            <Button layoutX="19.0" layoutY="92.0" mnemonicParsing="false" onAction="#btntambah" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 10;" text="Tambah Data">
+            <Button layoutX="19.0" layoutY="92.0" mnemonicParsing="false" onAction="#btntambahdata" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 10;" text="Tambah Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
