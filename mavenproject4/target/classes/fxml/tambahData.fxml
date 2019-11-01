@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.TambahDataController">
    <children>
       <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #8B0000;">
          <children>
@@ -52,18 +52,29 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button layoutX="376.0" layoutY="402.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="TAMBAH">
+            <Button fx:id="btnTambah" layoutX="376.0" layoutY="402.0" mnemonicParsing="false" onAction="#btnTambahData" style="-fx-background-radius: 30;" text="TAMBAH">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Spinner layoutX="322.0" layoutY="92.0" />
-            <TextField fx:id="tfsistol" layoutX="469.0" layoutY="92.0" prefHeight="39.0" prefWidth="80.0" />
-            <TextField fx:id="tfdiastol" layoutX="469.0" layoutY="142.0" prefHeight="39.0" prefWidth="80.0" />
-            <TextField fx:id="tfpulse" layoutX="469.0" layoutY="192.0" prefHeight="39.0" prefWidth="80.0" />
-            <TextField fx:id="tfgula" layoutX="469.0" layoutY="241.0" prefHeight="39.0" prefWidth="80.0" />
-            <TextField fx:id="tfberat" layoutX="469.0" layoutY="291.0" prefHeight="39.0" prefWidth="80.0" />
-            <TextField fx:id="tftinggi" layoutX="469.0" layoutY="340.0" prefHeight="39.0" prefWidth="80.0" />
+            <Spinner fx:id="spnsistol" layoutX="469.0" layoutY="92.0" prefHeight="39.0" prefWidth="80.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spndiastol" layoutX="469.0" layoutY="142.0" prefHeight="39.0" prefWidth="80.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spnpulse" layoutX="469.0" layoutY="192.0" prefHeight="39.0" prefWidth="80.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spngula" layoutX="469.0" layoutY="241.0" prefHeight="39.0" prefWidth="80.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spnberat" layoutX="469.0" layoutY="291.0" prefHeight="39.0" prefWidth="80.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spntinggi" layoutX="469.0" layoutY="340.0" prefHeight="39.0" prefWidth="80.0">
+                <editable>true</editable>
+            </Spinner>
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="10.0" prefHeight="41.0" prefWidth="301.0" text="Blood App" textFill="WHITE">

@@ -16,28 +16,15 @@ import java.sql.Statement;
  */
 public class Db {
     private Connection conn=null;
-    public void Connection(String user, String pass){ 
+    public static Connection connectDB(){
+        Connection con=null;
         try {
             String url = "jdbc:sqlite:logiin.db";
-            conn = DriverManager.getConnection(url);
-            Statement p = conn.createStatement();
-            System.out.println(user);
-            System.out.println(pass);
-            String query = "select *from user WHERE username = '"+user+"' AND password = '"+pass+"'";
-            
-            
+            con = DriverManager.getConnection(url);  
         }catch (SQLException e){
             System.out.println(e.getMessage());
-        }finally{
-            try{
-                if(conn !=null){
-                    conn.close();
-                }
-            }catch (SQLException e){
-            System.out.println(e.getMessage());
         }
-        }
-
+        return con;
     }
 }
 
