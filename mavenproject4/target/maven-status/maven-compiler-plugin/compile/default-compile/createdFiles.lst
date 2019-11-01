@@ -6,7 +6,6 @@ com\mycompany\mavenproject4\MenuController.class
 com\mycompany\mavenproject4\MainApp.class
 com\mycompany\mavenproject4\LupaPassController.class
 com\mycompany\mavenproject4\Model.class
-com\mycompany\mavenproject4\HomeeController.class
 com\mycompany\mavenproject4\SignUpController.class
 com\mycompany\mavenproject4\HistoryController.class
 com\mycompany\mavenproject4\TambahDataController.class

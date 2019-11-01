@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,26 +8,42 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="476.0" style="-fx-background-color: #8B0000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.HistoryController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.HistoryController">
    <children>
-      <Label layoutX="173.0" layoutY="24.0" text="RIWAYAT" textFill="WHITE">
+      <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #8B0000;">
+         <children>
+            <ImageView fitHeight="62.0" fitWidth="76.0" layoutY="-67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@blood-donation-pngrepo-com.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="322.0" layoutY="27.0" text="RIWAYAT DATA" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Button layoutX="376.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnBack" style="-fx-background-radius: 30;" text="Kembali">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TableView layoutX="28.0" layoutY="82.0" prefHeight="309.0" prefWidth="744.0">
+              <columns>
+                <TableColumn prefWidth="142.0" text="Tanggal" />
+                <TableColumn prefWidth="90.0" text="Sistolik" />
+                  <TableColumn prefWidth="94.0" text="Diastolik" />
+                  <TableColumn prefWidth="91.0" text="Pulse" />
+                  <TableColumn prefWidth="119.0" text="Kadar Gula Darah" />
+                  <TableColumn minWidth="0.0" prefWidth="101.0" text="Berat Badan" />
+                  <TableColumn prefWidth="106.0" text="Tinggi Badan" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="10.0" prefHeight="41.0" prefWidth="301.0" text="Blood App" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Button layoutX="332.0" layoutY="402.0" mnemonicParsing="false" onAction="#btnKembali" text="Kembali">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Button>
-      <TableView layoutX="19.0" layoutY="77.0" prefHeight="299.0" prefWidth="432.0">
-        <columns>
-          <TableColumn prefWidth="95.0" text="Tanggal" />
-          <TableColumn prefWidth="72.0" text="Sistolik" />
-            <TableColumn prefWidth="66.0" text="Distolik" />
-            <TableColumn prefWidth="75.0" text="Pulse" />
-            <TableColumn prefWidth="123.0" text="Kadar Gula Darah" />
-        </columns>
-      </TableView>
    </children>
 </AnchorPane>
