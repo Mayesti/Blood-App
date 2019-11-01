@@ -31,7 +31,7 @@ public class HistoryController implements Initializable {
     
     @FXML
     private void btnKembali(ActionEvent event) throws IOException{
-        Parent root=FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
+        Parent root=FXMLLoader.load(getClass().getResource("/fxml/Menu.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

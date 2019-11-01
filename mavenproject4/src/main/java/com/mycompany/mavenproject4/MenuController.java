@@ -30,7 +30,7 @@ public class MenuController implements Initializable {
     @FXML
     private void btntambahdata(ActionEvent event) throws IOException, SQLException{
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/menu.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/menuTambahData1.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));  
@@ -42,7 +42,15 @@ public class MenuController implements Initializable {
 
     @FXML
     private void btnriwayat(ActionEvent event) throws IOException, SQLException{
-
+          try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/History.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));  
+            stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
