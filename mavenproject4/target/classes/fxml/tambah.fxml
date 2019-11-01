@@ -24,12 +24,14 @@
       <TextField fx:id="diastol" layoutX="189.0" layoutY="161.0" style="-fx-background-radius: 10;" />
       <TextField fx:id="pulse" layoutX="189.0" layoutY="218.0" style="-fx-background-radius: 10;" />
       <TextField fx:id="guladarah" layoutX="189.0" layoutY="281.0" style="-fx-background-radius: 10;" />
-      <Button layoutX="318.0" layoutY="415.0" mnemonicParsing="false" onAction="#btntambahdataa" text="Tambah ">
+      <Button layoutX="315.0" layoutY="442.0" mnemonicParsing="false" onAction="#btntambahdataa" text="Tambah ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
       <TextField fx:id="berat" layoutX="189.0" layoutY="339.0" style="-fx-background-radius: 10;" />
       <Label alignment="TOP_CENTER" layoutX="27.0" layoutY="345.0" text="Berat Badan" textAlignment="CENTER" textFill="WHITE" />
+      <Label alignment="TOP_CENTER" layoutX="27.0" layoutY="402.0" text="Tinggi Badan" textAlignment="CENTER" textFill="WHITE" />
+      <TextField fx:id="berat1" layoutX="189.0" layoutY="396.0" style="-fx-background-radius: 10;" />
    </children>
 </AnchorPane>
