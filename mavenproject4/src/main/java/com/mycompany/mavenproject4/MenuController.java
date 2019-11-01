@@ -33,7 +33,7 @@ public class MenuController implements Initializable {
     private void btntambahdata(ActionEvent event){
         //showMessageDialog(null,"tes");
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/menuTambahData1.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/tambahData.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/style/Style.css");
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

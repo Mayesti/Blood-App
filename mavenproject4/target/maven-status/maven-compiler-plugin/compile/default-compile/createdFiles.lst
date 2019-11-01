@@ -9,4 +9,5 @@ com\mycompany\mavenproject4\Model.class
 com\mycompany\mavenproject4\HomeeController.class
 com\mycompany\mavenproject4\SignUpController.class
 com\mycompany\mavenproject4\HistoryController.class
+com\mycompany\mavenproject4\TambahDataController.class
 com\mycompany\mavenproject4\Db.class
