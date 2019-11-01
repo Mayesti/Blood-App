@@ -61,7 +61,7 @@ public class LoginController implements Initializable {
             ResultSet q = p.executeQuery(query);
             
             if(q.next()){
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/Homee.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add("/style/Style.css");
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -86,7 +86,7 @@ public class LoginController implements Initializable {
     private void btnSignUp(ActionEvent event) throws IOException, SQLException{
 //        System.out.println("clicked");
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/SignUp.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/menu.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));  
