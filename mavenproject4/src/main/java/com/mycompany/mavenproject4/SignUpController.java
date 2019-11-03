@@ -43,6 +43,9 @@ public class SignUpController implements Initializable {
     private TextField tfUsername;
     
     @FXML
+    private TextField tfNama;
+    
+    @FXML
     private TextField tfEmail;
     
     @FXML
@@ -66,6 +69,7 @@ public class SignUpController implements Initializable {
     private void btnRegister(ActionEvent event) throws SQLException, IOException{
 //        System.out.println("clicked btn login");
         String username = tfUsername.getText();
+        String nama = tfNama.getText();
         String email = tfEmail.getText();
         String tgl = dpTgl.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         String gender;
@@ -83,18 +87,18 @@ public class SignUpController implements Initializable {
             Statement p = con.createStatement();
 //            System.out.println(usern);
 //            System.out.println(pass);
-            String insert = "insert into user (username, password, email, tgl_lahir, jenis_kelamin) values ('"+username+"','"+password+"','"+email+"','"+tgl+"','"+gender+"')";
+            String insert = "insert into user (username, password, nama, email, tgl_lahir, jenis_kelamin) values ('"+username+"','"+password+"','"+nama+"','"+email+"','"+tgl+"','"+gender+"')";
             if(password.equals(konfirm)){
                 int q = p.executeUpdate(insert);
                 if(q == 1){
-                    Parent root = FXMLLoader.load(getClass().getResource("/fxml/Homee.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
                     Scene scene = new Scene(root);
                     scene.getStylesheets().add("/style/Style.css");
                     Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
                     window.setScene(scene);
                     window.show();
                     
-                    System.out.println("Berhasil");
+                    System.out.println("Berhasil menambahkan");
                     falsePass.setText(" ");
                     
                 }else{
@@ -103,12 +107,8 @@ public class SignUpController implements Initializable {
             }
             else {
                 falsePass.setText("Password dan konfirmasi password harus sama!");
-            }
+            }     
             
-                
-            
-            
-                
         } 
     
      
