@@ -29,7 +29,6 @@ public class MenuController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @FXML
     private void btntambahdata(ActionEvent event){
         //showMessageDialog(null,"tes");
         try {
@@ -44,7 +43,6 @@ public class MenuController implements Initializable {
         }
     }
 
-    @FXML
     private void btnriwayat(ActionEvent event){
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/History.fxml"));
@@ -58,15 +56,6 @@ public class MenuController implements Initializable {
         }
     }
 
-    @FXML
-    private void btnanalisis(ActionEvent event) {
-
-    }
-
-    @FXML
-    private void btngrafik(ActionEvent event) {
-
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
