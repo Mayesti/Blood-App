@@ -34,7 +34,7 @@
             <Text layoutX="66.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir : " />
             <Text layoutX="88.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " />
             <Text layoutX="27.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
-            <Button fx:id="btnRegister" layoutX="265.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="36.0" prefWidth="74.0" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Sign Up" textFill="WHITE">
+            <Button fx:id="btnRegister" layoutX="265.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="36.0" prefWidth="74.0" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Daftar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
