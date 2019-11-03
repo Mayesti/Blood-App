@@ -63,18 +63,22 @@ public class UbahPasswordController implements Initializable {
 //            }else if(baru != konfirm){
 //                labelAlert.setText("Password baru tidak sama dengan password konfirmasi!");
 //            }else if(lama == baru && baru == konfirm){
-            if(baru.equals(konfirm)){
+            if(!lama.equals(password)){
+                labelAlert.setText("Password lama salah!");
+            }else if(lama.equals(password) && baru.equals(konfirm)){
+                labelAlert.setText(" ");
                 try{
                     Connection con = Db.connectDB();
                     Statement stmt = con.createStatement();
                     stmt.executeUpdate(sql);
-                
-                    labelAlert.setText(" ");
+       
+                    
                 }
                 catch(SQLException e){
                     showMessageDialog(null,e.getMessage());
                 }
-            
+                
+                
                 showMessageDialog(null,"Password berhasil disimpan!");
                 Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
                 Scene scene = new Scene(root);
