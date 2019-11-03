@@ -12,4 +12,5 @@ package com.mycompany.mavenproject4;
 public class UserLogin {
     public static String username;
     public static String nama;
+    public static String password;
 }

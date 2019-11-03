@@ -29,6 +29,7 @@ public class MenuController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    @FXML
     private void btntambahdata(ActionEvent event){
         //showMessageDialog(null,"tes");
         try {
@@ -43,6 +44,7 @@ public class MenuController implements Initializable {
         }
     }
 
+    @FXML
     private void btnriwayat(ActionEvent event){
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/History.fxml"));
@@ -56,7 +58,49 @@ public class MenuController implements Initializable {
         }
     }
 
-
+    @FXML
+    private void btnanalisis(ActionEvent event){
+       
+    }
+    
+    @FXML
+    private void btngrafik(ActionEvent event){
+       
+    }
+    
+    @FXML
+    private void btnEditProfil(ActionEvent event){
+       try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/editProfil.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
+    }
+    
+    @FXML
+    private void btnUbahPass(ActionEvent event){
+       try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/ubahPassword.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
+    }
+    
+    @FXML
+    private void btnLogout(ActionEvent event){
+       
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
