@@ -1,12 +1,13 @@
 com\mycompany\mavenproject4\TambahController.class
-com\mycompany\mavenproject4\MenuTambahData1Controller.class
 com\mycompany\mavenproject4\LoginController.class
 com\mycompany\mavenproject4\UbahPassController.class
 com\mycompany\mavenproject4\MenuController.class
 com\mycompany\mavenproject4\MainApp.class
+com\mycompany\mavenproject4\EditProfilController.class
 com\mycompany\mavenproject4\LupaPassController.class
 com\mycompany\mavenproject4\Model.class
 com\mycompany\mavenproject4\UserLogin.class
+com\mycompany\mavenproject4\UbahPasswordController.class
 com\mycompany\mavenproject4\SignUpController.class
 com\mycompany\mavenproject4\HistoryController.class
 com\mycompany\mavenproject4\TambahDataController.class
