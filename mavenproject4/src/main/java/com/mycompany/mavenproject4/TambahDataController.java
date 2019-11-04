@@ -106,4 +106,18 @@ public class TambahDataController implements Initializable {
 
         System.out.println("Berhasil");
     }
+    
+    @FXML
+    private void btnBack(ActionEvent event) throws IOException{
+       try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
+    }
 }

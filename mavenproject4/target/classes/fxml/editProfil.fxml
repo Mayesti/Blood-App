@@ -43,22 +43,28 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Button blendMode="MULTIPLY" layoutX="386.0" layoutY="401.0" mnemonicParsing="false" text="Simpan">
+                  <Button blendMode="MULTIPLY" layoutX="386.0" layoutY="401.0" mnemonicParsing="false" style="-fx-background-radius: 50;" text="Simpan">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button blendMode="MULTIPLY" layoutX="279.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnBatal" prefHeight="39.0" prefWidth="88.0" text="Batal">
+                  <Button blendMode="MULTIPLY" layoutX="279.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnBatal" prefHeight="39.0" prefWidth="88.0" style="-fx-background-radius: 50;" text="Batal">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
                <effect>
                   <DropShadow />
                </effect>
             </AnchorPane>
-            <Label layoutX="54.0" layoutY="250.0" text="Edit Profile" textFill="WHITE">
+            <Label layoutX="54.0" layoutY="250.0" text="Edit Profil" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

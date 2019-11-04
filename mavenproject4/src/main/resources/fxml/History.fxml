@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -10,22 +11,20 @@
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.HistoryController">
    <children>
-      <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #8B0000;">
+      <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
          <children>
-            <ImageView fitHeight="62.0" fitWidth="76.0" layoutY="-67.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@blood-donation-pngrepo-com.png" />
-               </image>
-            </ImageView>
             <Label layoutX="322.0" layoutY="27.0" text="RIWAYAT DATA" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="376.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnBack" style="-fx-background-radius: 30;" text="Kembali">
+            <Button layoutX="376.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnBack" style="-fx-background-radius: 50;" text="Kembali">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <TableView fx:id="tvRiwayat" layoutX="32.0" layoutY="82.0" prefHeight="309.0" prefWidth="744.0">
               <columns>
@@ -40,10 +39,15 @@
             </TableView>
          </children>
       </AnchorPane>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-5.0" layoutY="10.0" prefHeight="41.0" prefWidth="301.0" text="Blood App" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="32.0" />
+            <Font name="Forte" size="32.0" />
          </font>
       </Label>
+      <ImageView fitHeight="62.0" fitWidth="76.0" layoutX="10.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@blood-donation-pngrepo-com.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
