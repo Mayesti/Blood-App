@@ -25,6 +25,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  * FXML Controller class
@@ -49,40 +50,42 @@ public class LoginController implements Initializable {
     private void btnLogin(ActionEvent event) throws SQLException, IOException{
 //        System.out.println("clicked btn login");
         String usern = tfUsername.getText();
-        String pass = pfPassword.getText();
-            
-        Connection con=Db.connectDB();
-        Statement p = con.createStatement();
-        System.out.println(usern);
-        System.out.println(pass);
-        String query = "select * from user WHERE Username = '"+usern+"' AND Password = '"+pass+"'";
-        ResultSet q = p.executeQuery(query);
+        String pass = pfPassword.getText(); 
+        try{
+            String query = "select * from user WHERE Username = '"+usern+"' AND Password = '"+pass+"'";
+            Connection con=Db.connectDB();
+            Statement p = con.createStatement();
+            ResultSet q = p.executeQuery(query);
 
-        if(q.next()){
-            UserLogin.username=q.getString("username");
-            UserLogin.nama=q.getString("nama");
-            UserLogin.password=q.getString("password");
-            
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add("/style/Style.css");
-            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-            window.setScene(scene);
-            window.show();
-        }
-        else {
-            if(usern.equals("") && pass.equals("")){
-                pesan.setText("Username dan password harus diisi!");
-            }
-            else if(usern.equals("") || pass.equals("")){
-                pesan.setText("Username atau password harus diisi!");
+            if(q.next()){
+                UserLogin.username=q.getString("username");
+                UserLogin.nama=q.getString("nama");
+                UserLogin.password=q.getString("password");
+
+                Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
+                Scene scene = new Scene(root);
+                scene.getStylesheets().add("/style/Style.css");
+                Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                window.setScene(scene);
+                window.show();
             }
             else{
-                pesan.setText("Password atau username salah!");
+                if(usern.equals("") && pass.equals("")){
+                    pesan.setText("Username dan password harus diisi!");
+                }
+                else if(usern.equals("") || pass.equals("")){
+                    pesan.setText("Username atau password harus diisi!");
+                }
+                else{
+                    pesan.setText("Password atau username salah!");
+                }
             }
-                
+            con.close();
         }
-
+        catch(SQLException e){
+            showMessageDialog(null,e.getMessage());
+        }
+        
     }
     
     @FXML

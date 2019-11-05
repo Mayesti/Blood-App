@@ -11,9 +11,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.MenuController">
    <children>
-      <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="234.0" style="-fx-background-color: #800000;">
+      <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
          <children>
-            <Button layoutX="26.0" layoutY="93.0" mnemonicParsing="false" onAction="#btntambahdata" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Tambah Data">
+            <Button layoutX="197.0" layoutY="189.0" mnemonicParsing="false" onAction="#btntambahdata" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Tambah Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -21,12 +21,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="76.0" layoutY="27.0" text="MENU" textFill="WHITE">
+            <Label layoutX="359.0" layoutY="24.0" text="MENU" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="26.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnriwayat" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Riwayat Data">
+            <Button layoutX="422.0" layoutY="189.0" mnemonicParsing="false" onAction="#btnriwayat" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Riwayat Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -34,7 +34,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="26.0" layoutY="242.0" mnemonicParsing="false" onAction="#btnanalisis" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Analisis Data">
+            <Button layoutX="197.0" layoutY="364.0" mnemonicParsing="false" onAction="#btnanalisis" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Analisis Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -42,7 +42,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="26.0" layoutY="317.0" mnemonicParsing="false" onAction="#btngrafik" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Grafik">
+            <Button layoutX="422.0" layoutY="364.0" mnemonicParsing="false" onAction="#btngrafik" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Grafik">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -50,27 +50,28 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <ImageView fitHeight="103.0" fitWidth="107.0" layoutX="462.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@11143-200.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="234.0" layoutY="66.0" prefHeight="471.0" prefWidth="566.0" style="-fx-background-color: #fecccc;">
-         <effect>
-            <DropShadow />
-         </effect></AnchorPane>
-      <Button layoutX="490.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">
+      <Button layoutX="490.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="588.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnUbahPass" style="-fx-background-color: transparent;" text="Ubah Password" textFill="WHITE">
+      <Button layoutX="588.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnUbahPass" style="-fx-background-color: transparent;" text="Ubah Password" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Button>
-      <Button layoutX="724.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnLogout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
+      <Button layoutX="724.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnLogout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

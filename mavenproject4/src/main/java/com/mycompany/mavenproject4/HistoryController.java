@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -86,6 +87,7 @@ public class HistoryController implements Initializable {
                 data.add(new DataRiwayat(tanggal,sistolik,diastolik,pulse,gulaDarah,berat,tinggi));
             }
             tvRiwayat.setItems(data);
+            con.close();
         }
         catch(Exception e){
             e.printStackTrace();
@@ -109,14 +111,15 @@ public class HistoryController implements Initializable {
     @FXML
     private void btnEditOnAction(ActionEvent event) {
         int selectedRowIdx=tvRiwayat.getSelectionModel().getSelectedIndex();
+        int idData=listIdData.get(selectedRowIdx);
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/editData.fxml"));
-            Scene scene = new Scene(root);
+            FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/editData.fxml"));
+            Scene scene = new Scene((Parent)root.load());
             scene.getStylesheets().add("/style/Style.css");
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
             window.setScene(scene);
             EditDataController editDataController=root.getController();
-            
+            editDataController.initData(idData);
             window.show();
         } catch(Exception e) {
             showMessageDialog(null,e.getMessage());
@@ -133,6 +136,7 @@ public class HistoryController implements Initializable {
                 Connection con=Db.connectDB();
                 Statement stmt=con.createStatement();
                 stmt.executeUpdate(sql);
+                con.close();
                 listIdData.remove(selectedRowIdx);
                 loadData();
             }
@@ -144,34 +148,15 @@ public class HistoryController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try{
-            columnTanggal.setCellValueFactory(new PropertyValueFactory<DataRiwayat,String>("tanggal"));
-            columnSistolik.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("sistolik"));
-            columnDiastolik.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("diastolik"));
-            columnPulse.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("pulse"));
-            columnKadarGulaDarah.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("gulaDarah"));
-            columnBeratBadan.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("beratBadan"));
-            columnTinggiBadan.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("tinggiBadan"));
-            ObservableList<DataRiwayat> data = FXCollections.observableArrayList();
-            String sql="SELECT * FROM data WHERE username='"+UserLogin.username+"'";
-            Connection con=Db.connectDB();
-            Statement stmt=con.createStatement();
-            ResultSet rs=stmt.executeQuery(sql);
-            while(rs.next()){
-                String tanggal=rs.getString("waktu_tambah");
-                int sistolik=rs.getInt("sistol");
-                int diastolik=rs.getInt("diastol");
-                int pulse=rs.getInt("pulse");
-                int gulaDarah=rs.getInt("gula_darah");
-                int berat=rs.getInt("berat");
-                int tinggi=rs.getInt("tinggi");
-                data.add(new DataRiwayat(tanggal,sistolik,diastolik,pulse,gulaDarah,berat,tinggi));
-            }
-            tvRiwayat.setItems(data);
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        listIdData=new ArrayList<Integer>();
+        columnTanggal.setCellValueFactory(new PropertyValueFactory<DataRiwayat,String>("tanggal"));
+        columnSistolik.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("sistolik"));
+        columnDiastolik.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("diastolik"));
+        columnPulse.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("pulse"));
+        columnKadarGulaDarah.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("gulaDarah"));
+        columnBeratBadan.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("beratBadan"));
+        columnTinggiBadan.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("tinggiBadan"));
+        loadData();
     }    
     
 }
