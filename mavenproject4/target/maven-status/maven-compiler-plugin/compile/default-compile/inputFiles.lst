@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\ASUS\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\SignUpController.java
 C:\Users\ASUS\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\MenuController.java
 C:\Users\ASUS\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\Db.java
@@ -12,3 +13,20 @@ C:\Users\ASUS\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycomp
 C:\Users\ASUS\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\EditProfilController.java
 C:\Users\ASUS\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\LupaPassController.java
 C:\Users\ASUS\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\TambahDataController.java
+=======
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\Model.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\UbahPasswordController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\SignUpController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\HistoryController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\MainApp.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\EditDataController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\UserLogin.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\MenuController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\TambahDataController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\Db.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\EditProfilController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\TambahController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\LupaPassController.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\DataRiwayat.java
+C:\Users\My Computer\Documents\GitHub\Blood-Apps\mavenproject4\src\main\java\com\mycompany\mavenproject4\LoginController.java
+>>>>>>> 85ad8b90da5a23628963a9d2bce7238d6fc94697
