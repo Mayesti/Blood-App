@@ -87,5 +87,13 @@
             <Image url="@blood-donation-pngrepo-com.png" />
          </image>
       </ImageView>
+<<<<<<< HEAD
+      <Label fx:id="lbwelcome" layoutX="566.0" layoutY="8.0" prefHeight="27.0" prefWidth="223.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+=======
+>>>>>>> be3025f36e4327e3000778fe41ba8b9b8c7d2a0e
    </children>
 </AnchorPane>
