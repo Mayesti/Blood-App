@@ -35,15 +35,15 @@
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tfnama" layoutX="83.0" layoutY="137.0" prefHeight="35.0" prefWidth="220.0" />
-                  <TextField fx:id="tfusername" layoutX="83.0" layoutY="224.0" prefHeight="35.0" prefWidth="220.0" />
-                  <TextField fx:id="tfemail" layoutX="83.0" layoutY="310.0" prefHeight="35.0" prefWidth="220.0" />
+                  <TextField layoutX="83.0" layoutY="137.0" prefHeight="35.0" prefWidth="220.0" />
+                  <TextField layoutX="83.0" layoutY="224.0" prefHeight="35.0" prefWidth="220.0" />
+                  <TextField layoutX="83.0" layoutY="310.0" prefHeight="35.0" prefWidth="220.0" />
                   <Label layoutX="223.0" layoutY="31.0" text="DATA USER">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Button blendMode="MULTIPLY" layoutX="386.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnsimpan" style="-fx-background-radius: 50;" text="Simpan">
+                  <Button blendMode="MULTIPLY" layoutX="386.0" layoutY="401.0" mnemonicParsing="false" style="-fx-background-radius: 50;" text="Simpan">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -51,7 +51,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="btnbatal" blendMode="MULTIPLY" layoutX="279.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnBatal" prefHeight="39.0" prefWidth="88.0" style="-fx-background-radius: 50;" text="Batal">
+                  <Button blendMode="MULTIPLY" layoutX="279.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnBatal" prefHeight="39.0" prefWidth="88.0" style="-fx-background-radius: 50;" text="Batal">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
