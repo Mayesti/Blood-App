@@ -17,7 +17,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -32,10 +31,6 @@ public class MenuController implements Initializable {
      * Initializes the controller class.
      */
     @FXML
-    private Label lbwelcome;
-    
-    
-    @FXML
     private void btntambahdata(ActionEvent event){
         //showMessageDialog(null,"tes");
         try {
@@ -49,7 +44,7 @@ public class MenuController implements Initializable {
             showMessageDialog(null,e.getMessage());
         }
     }
-    
+
     @FXML
     private void btnriwayat(ActionEvent event){
         try {
@@ -119,9 +114,6 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        String username = UserLogin.username;
-        lbwelcome.setText("Selamat Datang, " + username);
-    
     }    
     
 }
