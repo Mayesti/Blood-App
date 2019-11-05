@@ -48,13 +48,17 @@
                </font>
             </Label>
             <Button fx:id="btnSimpan" layoutX="455.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnSimpanData" style="-fx-background-radius: 50;" text="Simpan">
-               
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
             <Button layoutX="329.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnBack" style="-fx-background-radius: 50;" text="Kembali">
-               
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

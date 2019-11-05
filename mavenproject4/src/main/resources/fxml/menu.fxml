@@ -66,13 +66,10 @@
             <Image url="@blood-donation-pngrepo-com.png" />
          </image>
       </ImageView>
-<<<<<<< HEAD
       <Label fx:id="lbwelcome" layoutX="566.0" layoutY="8.0" prefHeight="27.0" prefWidth="223.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-=======
->>>>>>> 85ad8b90da5a23628963a9d2bce7238d6fc94697
    </children>
 </AnchorPane>
