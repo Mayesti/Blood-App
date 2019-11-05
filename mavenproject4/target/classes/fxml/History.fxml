@@ -22,9 +22,6 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
             </Button>
             <TableView fx:id="tvRiwayat" layoutX="32.0" layoutY="82.0" prefHeight="309.0" prefWidth="744.0">
               <columns>
@@ -37,6 +34,11 @@
                   <TableColumn fx:id="columnTinggiBadan" prefWidth="106.0" text="Tinggi Badan" />
               </columns>
             </TableView>
+            <Button fx:id="btnEdit" layoutX="502.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnEditOnAction" text="Edit">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">

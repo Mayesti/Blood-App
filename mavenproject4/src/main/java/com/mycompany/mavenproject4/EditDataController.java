@@ -10,9 +10,16 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Spinner;
+import javafx.stage.Stage;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  * FXML Controller class
@@ -20,35 +27,42 @@ import javafx.scene.control.Label;
  * @author My Computer
  */
 public class EditDataController implements Initializable {
-        @FXML
-    private Label lSistol;
+    @FXML
+    private Spinner<Integer> spnTinggi;
 
     @FXML
-    private Label lPulse;
+    private Spinner<Integer> spnPulse;
 
     @FXML
-    private Button btnSimpan;
+    private Spinner<Integer> spnGula;
 
     @FXML
-    private Label lGulDar;
+    private Spinner<Integer> spnBerat;
 
     @FXML
-    private Label lBerat;
+    private Spinner<Integer> spnSistol;
 
     @FXML
-    private Label lDiastol;
-
-    @FXML
-    private Label lTinggi;
+    private Spinner<Integer> spnDiastol;
+    ;
 
     @FXML
     void btnSimpanData(ActionEvent event) {
-
+        
     }
 
     @FXML
     void btnBack(ActionEvent event) {
-
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/History.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
     }
     /**
      * Initializes the controller class.

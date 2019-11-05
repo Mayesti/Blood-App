@@ -63,12 +63,24 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Label fx:id="lSistol" layoutX="471.0" layoutY="100.0" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: #fcfafa;" />
-            <Label fx:id="lDiastol" layoutX="471.0" layoutY="153.0" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: #fcfafa;" />
-            <Label fx:id="lPulse" layoutX="471.0" layoutY="202.0" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: #fcfafa;" />
-            <Label fx:id="lGulDar" layoutX="471.0" layoutY="252.0" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: #fcfafa;" />
-            <Label fx:id="lBerat" layoutX="471.0" layoutY="302.0" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: #fcfafa;" />
-            <Label fx:id="lTinggi" layoutX="471.0" layoutY="351.0" prefHeight="20.0" prefWidth="88.0" style="-fx-background-color: #fcfafa;" />
+            <Spinner fx:id="spnSistol" layoutX="471.0" layoutY="100.0" prefHeight="20.0" prefWidth="88.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spnDiastol" layoutX="471.0" layoutY="153.0" prefHeight="20.0" prefWidth="88.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spnPulse" layoutX="471.0" layoutY="202.0" prefHeight="20.0" prefWidth="88.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spnGula" layoutX="471.0" layoutY="252.0" prefHeight="20.0" prefWidth="88.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spnBerat" layoutX="471.0" layoutY="302.0" prefHeight="20.0" prefWidth="88.0">
+                <editable>true</editable>
+            </Spinner>
+            <Spinner fx:id="spnTinggi" layoutX="471.0" layoutY="351.0" prefHeight="20.0" prefWidth="88.0">
+                <editable>true</editable>
+            </Spinner>
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">

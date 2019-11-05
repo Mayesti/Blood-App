@@ -23,6 +23,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
@@ -71,6 +72,23 @@ public class HistoryController implements Initializable {
             scene.getStylesheets().add("/style/Style.css");
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
             window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
+    }
+    
+    @FXML
+    private void btnEditOnAction(ActionEvent event) {
+        int selectedRowIdx=tvRiwayat.getSelectionModel().getSelectedIndex();
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/editData.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            EditDataController editDataController=root.getController();
+            
             window.show();
         } catch(Exception e) {
             showMessageDialog(null,e.getMessage());
