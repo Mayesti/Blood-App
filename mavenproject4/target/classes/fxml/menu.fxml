@@ -11,9 +11,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.MenuController">
    <children>
-      <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
+      <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="234.0" style="-fx-background-color: #800000;">
          <children>
-            <Button layoutX="195.0" layoutY="213.0" mnemonicParsing="false" onAction="#btntambahdata" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Tambah Data">
+            <Button layoutX="26.0" layoutY="93.0" mnemonicParsing="false" onAction="#btntambahdata" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Tambah Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -21,12 +21,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="359.0" layoutY="14.0" text="MENU" textFill="WHITE">
+            <Label layoutX="76.0" layoutY="27.0" text="MENU" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="424.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnriwayat" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Riwayat Data">
+            <Button layoutX="26.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnriwayat" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Riwayat Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -34,7 +34,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="195.0" layoutY="403.0" mnemonicParsing="false" onAction="#btnanalisis" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Analisis Data">
+            <Button layoutX="26.0" layoutY="242.0" mnemonicParsing="false" onAction="#btnanalisis" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Analisis Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -42,7 +42,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="424.0" layoutY="403.0" mnemonicParsing="false" onAction="#btngrafik" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Grafik">
+            <Button layoutX="26.0" layoutY="317.0" mnemonicParsing="false" onAction="#btngrafik" prefHeight="39.0" prefWidth="182.0" style="-fx-background-radius: 50;" text="Grafik">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -50,20 +50,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ImageView fitHeight="125.0" fitWidth="129.0" layoutX="222.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="125.0" fitWidth="129.0" layoutX="468.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../Downloads/49-492759_graph-icon-png-paper-with-check-mark.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="125.0" fitWidth="129.0" layoutX="222.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="125.0" fitWidth="129.0" layoutX="453.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../Downloads/11143-200.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
+      <AnchorPane layoutX="234.0" layoutY="66.0" prefHeight="471.0" prefWidth="566.0" style="-fx-background-color: #fecccc;">
+         <effect>
+            <DropShadow />
+         </effect></AnchorPane>
       <Button layoutX="490.0" layoutY="30.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -95,10 +87,5 @@
             <Image url="@blood-donation-pngrepo-com.png" />
          </image>
       </ImageView>
-      <Label fx:id="lbwelcome" layoutX="501.0" layoutY="10.0" prefHeight="27.0" prefWidth="287.0" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
