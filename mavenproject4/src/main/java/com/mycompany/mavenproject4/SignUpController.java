@@ -82,7 +82,7 @@ public class SignUpController implements Initializable {
         String konfirm = pfKonfirm.getText();
                  
         
-            String url = "jdbc:sqlite:logiin.db";
+            String url = "jdbc:sqlite:bloodapps.db";
             con = DriverManager.getConnection(url);
             Statement p = con.createStatement();
 //            System.out.println(usern);

@@ -120,7 +120,7 @@ public class MenuController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         String welcome = UserLogin.nama;
-        lbwelcome.setText("Selamat Datang, " + welcome);
+        lbwelcome.setText("Selamat datang, " + welcome + "!");
     }    
     
 }
