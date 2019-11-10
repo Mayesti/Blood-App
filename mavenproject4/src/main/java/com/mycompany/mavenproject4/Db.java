@@ -19,7 +19,7 @@ public class Db {
     public static Connection connectDB(){
         Connection con=null;
         try {
-            String url = "jdbc:sqlite:logiin.db";
+            String url = "jdbc:sqlite:bloodapps.db";
             con = DriverManager.getConnection(url);  
         }catch (SQLException e){
             System.out.println(e.getMessage());

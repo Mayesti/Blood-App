@@ -86,7 +86,8 @@ public class TambahDataController implements Initializable {
         Date currentDate=new Date();
         SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd");
         String tanggalSkrg=formatter.format(currentDate);
-        String sql="INSERT INTO data(username,sistol,diastol,pulse,gula_darah,berat,tinggi,waktu_tambah) VALUES('"+username+"',"+sistol+","+diastol+","+pulse+","+gula+","+berat+","+tinggi+",'"+tanggalSkrg+"')";
+        String sql="INSERT INTO data(username,sistol,diastol,pulse,gula_darah,berat,tinggi,waktu_tambah) VALUES('"+username+"',"
+                + ""+sistol+","+diastol+","+pulse+","+gula+","+berat+","+tinggi+",'"+tanggalSkrg+"')";
         //showMessageDialog(null,sql);
         try{
             Connection con=Db.connectDB();
