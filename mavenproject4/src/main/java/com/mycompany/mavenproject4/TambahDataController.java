@@ -86,6 +86,18 @@ public class TambahDataController implements Initializable {
         Date currentDate=new Date();
         SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd");
         String tanggalSkrg=formatter.format(currentDate);
+        
+        int sistolint = Integer.parseInt(sistol);
+        int diastolint = Integer.parseInt(diastol);
+        int pulseint = Integer.parseInt(pulse);
+        int gulaint = Integer.parseInt(gula);
+        int beratint = Integer.parseInt(berat);
+        int tinggiint = Integer.parseInt(tinggi);
+        
+        if((sistolint <0) || (sistolint >1000) || (diastolint <0) || (diastolint >1000) || (pulseint <0) || (pulseint >1000) || (gulaint <0) || (gulaint >1000) || (beratint <0) || (beratint >1000) || (tinggiint <0) || (tinggiint >1000)){
+            showMessageDialog(null, "Angka tidak valid!");
+        }else{
+            
         String sql="INSERT INTO data(username,sistol,diastol,pulse,gula_darah,berat,tinggi,waktu_tambah) VALUES('"+username+"',"
                 + ""+sistol+","+diastol+","+pulse+","+gula+","+berat+","+tinggi+",'"+tanggalSkrg+"')";
         //showMessageDialog(null,sql);
@@ -106,8 +118,9 @@ public class TambahDataController implements Initializable {
         window.show();
 
         System.out.println("Berhasil");
+        }
+        
     }
-    
     @FXML
     private void btnBack(ActionEvent event) throws IOException{
        try {

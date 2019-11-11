@@ -60,6 +60,17 @@ public class EditDataController implements Initializable {
         String gula=spnGula.getEditor().getText();
         String berat=spnBerat.getEditor().getText();
         String tinggi=spnTinggi.getEditor().getText();
+        
+        int sistolint = Integer.parseInt(sistol);
+        int diastolint = Integer.parseInt(diastol);
+        int pulseint = Integer.parseInt(pulse);
+        int gulaint = Integer.parseInt(gula);
+        int beratint = Integer.parseInt(berat);
+        int tinggiint = Integer.parseInt(tinggi);
+        
+        if((sistolint <0) || (sistolint >1000) || (diastolint <0) || (diastolint >1000) || (pulseint <0) || (pulseint >1000) || (gulaint <0) || (gulaint >1000) || (beratint <0) || (beratint >1000) || (tinggiint <0) || (tinggiint >1000)){
+            showMessageDialog(null, "Angka tidak valid!");
+        }else{
         String sql="UPDATE data SET sistol="+sistol+",diastol="+diastol+",pulse="+pulse+",gula_darah="+gula+",berat="+berat+",tinggi="+tinggi+" WHERE id_data="+idData;
         try{
             Connection con=Db.connectDB();
@@ -81,6 +92,7 @@ public class EditDataController implements Initializable {
         catch(Exception e){
             showMessageDialog(null,e.getMessage());
         }
+    }
     }
 
     @FXML
