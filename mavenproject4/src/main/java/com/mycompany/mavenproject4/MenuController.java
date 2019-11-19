@@ -46,7 +46,7 @@ public class MenuController implements Initializable {
             window.setScene(scene);
             window.show();
         } catch(Exception e) {
-            showMessageDialog(null,e.getMessage());
+            e.printStackTrace();
         }
     }
 

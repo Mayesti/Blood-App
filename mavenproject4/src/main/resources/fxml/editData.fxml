@@ -12,37 +12,37 @@
    <children>
       <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
          <children>
-            <Label layoutX="322.0" layoutY="27.0" text="EDIT DATA" textFill="WHITE">
+            <Label layoutX="362.0" layoutY="27.0" text="EDIT DATA" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Label>
-            <Label layoutX="295.0" layoutY="98.0" prefHeight="27.0" prefWidth="160.0" text="Sistol" textFill="WHITE">
+            <Label layoutX="244.0" layoutY="98.0" prefHeight="27.0" prefWidth="160.0" text="Sistol" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="295.0" layoutY="149.0" prefHeight="27.0" prefWidth="160.0" text="Diastol" textFill="WHITE">
+            <Label layoutX="244.0" layoutY="149.0" prefHeight="27.0" prefWidth="160.0" text="Diastol" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="295.0" layoutY="198.0" prefHeight="27.0" prefWidth="160.0" text="Pulse" textFill="WHITE">
+            <Label layoutX="244.0" layoutY="198.0" prefHeight="27.0" prefWidth="160.0" text="Pulse" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="295.0" layoutY="248.0" prefHeight="27.0" prefWidth="160.0" text="Kadar Gula Darah" textFill="WHITE">
+            <Label layoutX="244.0" layoutY="248.0" prefHeight="27.0" prefWidth="160.0" text="Kadar Gula Darah" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="295.0" layoutY="347.0" prefHeight="27.0" prefWidth="160.0" text="Tinggi Badan" textFill="WHITE">
+            <Label layoutX="244.0" layoutY="345.0" prefHeight="27.0" prefWidth="160.0" text="Tanggal" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="295.0" layoutY="298.0" prefHeight="27.0" prefWidth="160.0" text="Berat Badan" textFill="WHITE">
+            <Label layoutX="244.0" layoutY="298.0" prefHeight="27.0" prefWidth="160.0" text="Berat Badan" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -78,9 +78,10 @@
             <Spinner fx:id="spnBerat" layoutX="471.0" layoutY="302.0" prefHeight="20.0" prefWidth="88.0">
                 <editable>true</editable>
             </Spinner>
-            <Spinner fx:id="spnTinggi" layoutX="471.0" layoutY="351.0" prefHeight="20.0" prefWidth="88.0">
+            <DatePicker fx:id="dpTgl" layoutX="469.0" layoutY="346.0" prefWidth="130.0" />
+<!--            <Spinner fx:id="spnTinggi" layoutX="471.0" layoutY="351.0" prefHeight="20.0" prefWidth="88.0">
                 <editable>true</editable>
-            </Spinner>
+            </Spinner>-->
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">

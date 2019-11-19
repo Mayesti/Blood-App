@@ -63,9 +63,6 @@ public class HistoryController implements Initializable {
     @FXML
     private TableColumn<DataRiwayat,Integer> columnBeratBadan;
     
-    @FXML
-    private TableColumn<DataRiwayat,Integer> columnTinggiBadan;
-    
     private List<Integer> listIdData;
     
     private void loadData(){
@@ -83,8 +80,7 @@ public class HistoryController implements Initializable {
                 int pulse=rs.getInt("pulse");
                 int gulaDarah=rs.getInt("gula_darah");
                 int berat=rs.getInt("berat");
-                int tinggi=rs.getInt("tinggi");
-                data.add(new DataRiwayat(tanggal,sistolik,diastolik,pulse,gulaDarah,berat,tinggi));
+                data.add(new DataRiwayat(tanggal,sistolik,diastolik,pulse,gulaDarah,berat));
             }
             tvRiwayat.setItems(data);
             con.close();
@@ -155,7 +151,6 @@ public class HistoryController implements Initializable {
         columnPulse.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("pulse"));
         columnKadarGulaDarah.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("gulaDarah"));
         columnBeratBadan.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("beratBadan"));
-        columnTinggiBadan.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("tinggiBadan"));
         loadData();
     }    
     

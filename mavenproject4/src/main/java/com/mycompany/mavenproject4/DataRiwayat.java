@@ -19,15 +19,13 @@ public class DataRiwayat {
     private Integer pulse;
     private Integer gulaDarah;
     private Integer beratBadan;
-    private Integer tinggiBadan;
-    public DataRiwayat(String tanggal,int sistolik,int diastolik,int pulse,int gulaDarah,int beratBadan,int tinggiBadan){
+    public DataRiwayat(String tanggal,int sistolik,int diastolik,int pulse,int gulaDarah,int beratBadan){
         this.tanggal=tanggal;
         this.sistolik=sistolik;
         this.diastolik=diastolik;
         this.pulse=pulse;
         this.gulaDarah=gulaDarah;
         this.beratBadan=beratBadan;
-        this.tinggiBadan=tinggiBadan;
     }
 
     /**
@@ -112,19 +110,5 @@ public class DataRiwayat {
      */
     public void setBeratBadan(Integer beratBadan) {
         this.beratBadan = beratBadan;
-    }
-
-    /**
-     * @return the tinggiBadan
-     */
-    public Integer getTinggiBadan() {
-        return tinggiBadan;
-    }
-
-    /**
-     * @param tinggiBadan the tinggiBadan to set
-     */
-    public void setTinggiBadan(Integer tinggiBadan) {
-        this.tinggiBadan = tinggiBadan;
     }
 }
