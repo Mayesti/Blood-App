@@ -14,4 +14,5 @@ public class UserLogin {
     public static String nama;
     public static String password;
     public static String email;
+    public static String tinggi_badan;
 }

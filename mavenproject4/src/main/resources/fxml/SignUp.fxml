@@ -13,57 +13,66 @@
    <children>
       <AnchorPane layoutX="233.0" prefHeight="400.0" prefWidth="367.0" style="-fx-background-color: #fecccc; -fx-background-radius: 0;">
          <children>
-            <Label layoutX="28.0" layoutY="23.0" text="Buat Akun">
+            <Label layoutX="28.0" layoutY="16.0" text="Buat Akun">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="tfUsername" layoutX="156.0" layoutY="83.0" prefHeight="25.0" prefWidth="182.0">
+            <TextField fx:id="tfUsername" layoutX="156.0" layoutY="58.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
-               </cursor></TextField>
-            <Text layoutX="84.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username : " />
-            <TextField fx:id="tfEmail" layoutX="156.0" layoutY="152.0" prefHeight="25.0" prefWidth="182.0">
+               </cursor>
+            </TextField>
+            <Text layoutX="84.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username : " />
+            <TextField fx:id="tfEmail" layoutX="156.0" layoutY="127.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
-               </cursor></TextField>
-            <Text layoutX="109.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
-            <RadioButton fx:id="rbPria" layoutX="156.0" layoutY="187.0" mnemonicParsing="false" text="Laki-laki" />
-            <RadioButton fx:id="rbWanita" layoutX="248.0" layoutY="187.0" mnemonicParsing="false" text="Perempuan" />
-            <Text layoutX="67.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin : " />
-            <Text layoutX="66.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir : " />
-            <Text layoutX="88.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " />
-            <Text layoutX="27.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
-            <Button fx:id="btnRegister" layoutX="265.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="36.0" prefWidth="74.0" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Daftar" textFill="WHITE">
+               </cursor>
+            </TextField>
+            <Text layoutX="109.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" />
+            <RadioButton fx:id="rbPria" layoutX="156.0" layoutY="162.0" mnemonicParsing="false" text="Laki-laki" />
+            <RadioButton fx:id="rbWanita" layoutX="248.0" layoutY="162.0" mnemonicParsing="false" text="Perempuan" />
+            <Text layoutX="67.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin : " />
+            <Text layoutX="66.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal Lahir : " />
+            <Text layoutX="88.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password : " />
+            <Text layoutX="27.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konfirmasi Password : " />
+            <Button fx:id="btnRegister" layoutX="265.0" layoutY="353.0" mnemonicParsing="false" onAction="#btnRegister" prefHeight="36.0" prefWidth="74.0" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Daftar" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor></Button>
-            <DatePicker fx:id="dpTgl" layoutX="156.0" layoutY="215.0" prefHeight="25.0" prefWidth="182.0">
+            </Button>
+            <DatePicker fx:id="dpTgl" layoutX="156.0" layoutY="190.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
-               </cursor></DatePicker>
-            <PasswordField fx:id="pfPassword" layoutX="156.0" layoutY="250.0" prefHeight="25.0" prefWidth="182.0">
+               </cursor>
+            </DatePicker>
+            <PasswordField fx:id="pfPassword" layoutX="156.0" layoutY="265.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
-               </cursor></PasswordField>
-            <PasswordField fx:id="pfKonfirm" layoutX="156.0" layoutY="285.0" prefHeight="25.0" prefWidth="182.0">
+               </cursor>
+            </PasswordField>
+            <PasswordField fx:id="pfKonfirm" layoutX="156.0" layoutY="300.0" prefHeight="25.0" prefWidth="182.0">
                <cursor>
                   <Cursor fx:constant="TEXT" />
-               </cursor></PasswordField>
-            <Label fx:id="falsePass" layoutX="50.0" layoutY="316.0" prefHeight="17.0" prefWidth="287.0" textFill="RED">
+               </cursor>
+            </PasswordField>
+            <Label fx:id="falsePass" layoutX="52.0" layoutY="339.0" prefHeight="17.0" prefWidth="287.0" textFill="RED">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Label>
-            <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="136.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="34.0" layoutX="136.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pensil.png" />
+                  <Image url="@../../../../../../../../Desktop/com.mycompany_mavenproject4_jar_1.0-SNAPSHOT/src/main/resources/fxml/pensil.png" />
                </image>
             </ImageView>
-            <Text layoutX="58.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap :" />
-            <TextField fx:id="tfNama" layoutX="156.0" layoutY="118.0" prefHeight="25.0" prefWidth="182.0" />
+            <Text layoutX="58.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap :" />
+            <TextField fx:id="tfNama" layoutX="156.0" layoutY="93.0" prefHeight="25.0" prefWidth="182.0" />
+            <Text layoutX="66.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tinggi Badan:" />
+            <TextField fx:id="tftinggi" layoutX="156.0" layoutY="228.0" prefHeight="25.0" prefWidth="182.0" />
          </children>
          <effect>
             <DropShadow />
@@ -73,7 +82,7 @@
          <children>
             <ImageView fitHeight="104.0" fitWidth="108.0" layoutX="65.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@blood-donation-pngrepo-com.png" />
+                  <Image url="@../../../../../../../../Desktop/com.mycompany_mavenproject4_jar_1.0-SNAPSHOT/src/main/resources/fxml/blood-donation-pngrepo-com.png" />
                </image>
             </ImageView>
             <Label layoutX="44.0" layoutY="226.0" text="Blood App" textFill="WHITE">

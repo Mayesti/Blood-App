@@ -42,14 +42,18 @@ public class EditProfilController implements Initializable {
 
     @FXML
     private TextField tfusername;
-
+    
+    @FXML
+    private TextField tftinggi;
+    
     @FXML
     private void btnsimpan(ActionEvent event) {
         String usernamebaru = tfusername.getText();
         String namabaru = tfnama.getText();
         String emailbaru = tfemail.getText();
-        if(!usernamebaru.isEmpty() && !namabaru.isEmpty() && !emailbaru.isEmpty()){
-             String sql = "update user set nama='"+namabaru+"', username='"+usernamebaru+"', email ='"+emailbaru+"' where username='"+username+"'"; 
+        String tinggibaru = tftinggi.getText();
+        if(!usernamebaru.isEmpty() && !namabaru.isEmpty() && !emailbaru.isEmpty() && !tinggibaru.isEmpty()){
+             String sql = "update user set nama='"+namabaru+"', username='"+usernamebaru+"', email ='"+emailbaru+"', tinggi_badan='"+tinggibaru+"' where username='"+username+"'"; 
             try{
                 Connection con=Db.connectDB();
                 Statement stmt=con.createStatement();
@@ -61,6 +65,7 @@ public class EditProfilController implements Initializable {
             UserLogin.nama = namabaru;
             UserLogin.username = usernamebaru;
             UserLogin.email = emailbaru;
+            UserLogin.tinggi_badan = tinggibaru;
             
             try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
@@ -99,11 +104,12 @@ public class EditProfilController implements Initializable {
         String username = UserLogin.username;
         String nama = UserLogin.nama;
         String email = UserLogin.email;
+        String tinggi = UserLogin.tinggi_badan;
         
         tfusername.setText(username);
         tfnama.setText(nama);
         tfemail.setText(email);
-        
+        tftinggi.setText(tinggi);
         
     }    
     

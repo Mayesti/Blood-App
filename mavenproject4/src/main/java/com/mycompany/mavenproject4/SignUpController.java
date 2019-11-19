@@ -47,7 +47,10 @@ public class SignUpController implements Initializable {
     
     @FXML
     private TextField tfEmail;
-    
+   
+    @FXML
+    private TextField tftinggi;
+     
     @FXML
     private PasswordField pfPassword;
     
@@ -72,6 +75,7 @@ public class SignUpController implements Initializable {
         String nama = tfNama.getText();
         String email = tfEmail.getText();
         String tgl = dpTgl.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        String tinggi = tftinggi.getText();
         String gender;
         if(rbPria.isSelected()){
             gender = "L";
@@ -80,6 +84,7 @@ public class SignUpController implements Initializable {
         }
         String password = pfPassword.getText();
         String konfirm = pfKonfirm.getText();
+       
                  
         
             String url = "jdbc:sqlite:bloodapps.db";
@@ -87,11 +92,13 @@ public class SignUpController implements Initializable {
             Statement p = con.createStatement();
 //            System.out.println(usern);
 //            System.out.println(pass);
-            String insert = "insert into user (username, password, nama, email, tgl_lahir, jenis_kelamin) values ('"+username+"','"+password+"','"+nama+"','"+email+"','"+tgl+"','"+gender+"')";
+            String insert = "insert into user (username, password, nama, email, tgl_lahir, jenis_kelamin, tinggi_badan) values ('"+username+"','"+password+"','"+nama+"','"+email+"','"+tgl+"','"+gender+"', '"+tinggi+"')";
             if(password.equals(konfirm)){
                 int q = p.executeUpdate(insert);
+                
                 if(q == 1){
-                    Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
+                     UserLogin.username = username;
+                    Parent root = FXMLLoader.load(getClass().getResource("/fxml/Login.fxml"));
                     Scene scene = new Scene(root);
                     scene.getStylesheets().add("/style/Style.css");
                     Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
@@ -115,6 +122,7 @@ public class SignUpController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        String username = UserLogin.username;
     }    
     
 }

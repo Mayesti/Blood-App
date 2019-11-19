@@ -62,6 +62,7 @@ public class LoginController implements Initializable {
                 UserLogin.nama=q.getString("nama");
                 UserLogin.password=q.getString("password");
                 UserLogin.email=q.getString("email");
+                UserLogin.tinggi_badan=q.getString("tinggi_badan");
                 Parent root = FXMLLoader.load(getClass().getResource("/fxml/menu.fxml"));
                 Scene scene = new Scene(root);
                 scene.getStylesheets().add("/style/Style.css");

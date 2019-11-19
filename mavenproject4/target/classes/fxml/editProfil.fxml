@@ -15,35 +15,35 @@
          <children>
             <ImageView fitHeight="82.0" fitWidth="88.0" layoutX="76.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@107-1078153_ykle-wode-icon-free-download-edit-profile-icon%20-%20Copy.png" />
+                  <Image url="@../../../../../../../../Desktop/com.mycompany_mavenproject4_jar_1.0-SNAPSHOT/src/main/resources/fxml/107-1078153_ykle-wode-icon-free-download-edit-profile-icon%20-%20Copy.png" />
                </image>
             </ImageView>
             <AnchorPane layoutX="234.0" prefHeight="471.0" prefWidth="566.0" style="-fx-background-color: #fecccc;">
                <children>
-                  <Label layoutX="83.0" layoutY="102.0" prefHeight="27.0" prefWidth="120.0" text="Nama">
+                  <Label layoutX="83.0" layoutY="71.0" prefHeight="27.0" prefWidth="120.0" text="Nama">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="83.0" layoutY="190.0" prefHeight="27.0" prefWidth="120.0" text="Username">
+                  <Label layoutX="83.0" layoutY="159.0" prefHeight="27.0" prefWidth="120.0" text="Username">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="83.0" layoutY="276.0" prefHeight="27.0" prefWidth="120.0" text="Email">
+                  <Label layoutX="83.0" layoutY="245.0" prefHeight="27.0" prefWidth="120.0" text="Email">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tfnama" layoutX="83.0" layoutY="137.0" prefHeight="35.0" prefWidth="220.0" />
-                  <TextField fx:id="tfusername" layoutX="83.0" layoutY="224.0" prefHeight="35.0" prefWidth="220.0" />
-                  <TextField fx:id="tfemail" layoutX="83.0" layoutY="310.0" prefHeight="35.0" prefWidth="220.0" />
-                  <Label layoutX="223.0" layoutY="31.0" text="DATA USER">
+                  <TextField fx:id="tfnama" layoutX="83.0" layoutY="106.0" prefHeight="35.0" prefWidth="220.0" />
+                  <TextField fx:id="tfusername" layoutX="83.0" layoutY="193.0" prefHeight="35.0" prefWidth="220.0" />
+                  <TextField fx:id="tfemail" layoutX="83.0" layoutY="279.0" prefHeight="35.0" prefWidth="220.0" />
+                  <Label layoutX="223.0" layoutY="21.0" text="DATA USER">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Button blendMode="MULTIPLY" layoutX="386.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnsimpan" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Simpan" textFill="WHITE">
+                  <Button blendMode="MULTIPLY" layoutX="386.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnsimpan" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Simpan" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -51,7 +51,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button blendMode="MULTIPLY" layoutX="279.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnBatal" prefHeight="39.0" prefWidth="88.0" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Batal" textFill="WHITE">
+                  <Button blendMode="MULTIPLY" layoutX="279.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnBatal" prefHeight="39.0" prefWidth="88.0" style="-fx-background-radius: 50; -fx-background-color: #800000;" text="Batal" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -59,6 +59,12 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
+                  <TextField fx:id="tftinggi" layoutX="83.0" layoutY="368.0" prefHeight="35.0" prefWidth="220.0" />
+                  <Label layoutX="83.0" layoutY="334.0" prefHeight="27.0" prefWidth="120.0" text="Tinggi Badan">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
                </children>
                <effect>
                   <DropShadow />
@@ -78,7 +84,7 @@
       </Label>
       <ImageView fitHeight="62.0" fitWidth="76.0" layoutX="10.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@blood-donation-pngrepo-com.png" />
+            <Image url="@../../../../../../../../Desktop/com.mycompany_mavenproject4_jar_1.0-SNAPSHOT/src/main/resources/fxml/blood-donation-pngrepo-com.png" />
          </image>
       </ImageView>
    </children>
