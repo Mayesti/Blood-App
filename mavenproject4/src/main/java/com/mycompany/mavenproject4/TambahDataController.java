@@ -94,7 +94,7 @@ public class TambahDataController implements Initializable {
         int gulaint = Integer.parseInt(gula);
         int beratint = Integer.parseInt(berat);
         
-        if((sistolint <30) || (sistolint >1000) || (diastolint <30) || (diastolint >1000) || (pulseint <30) || (pulseint >1000) || (gulaint <30) || (gulaint >1000) || (beratint <20) || (beratint >1000)){
+        if((sistolint <30) || (sistolint >145) || (diastolint <60) || (diastolint >110) || (pulseint <50) || (pulseint >120) || (gulaint <80) || (gulaint >140) || (beratint <20) || (beratint >200)){
             showMessageDialog(null, "Angka tidak valid!");
         }else{
             
