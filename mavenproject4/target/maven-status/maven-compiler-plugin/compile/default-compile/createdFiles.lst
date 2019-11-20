@@ -1,5 +1,7 @@
 com\mycompany\mavenproject4\EditDataController.class
+com\mycompany\mavenproject4\CaraPenangananController.class
 com\mycompany\mavenproject4\LoginController.class
+com\mycompany\mavenproject4\OlahragaController.class
 com\mycompany\mavenproject4\MenuController.class
 com\mycompany\mavenproject4\MainApp.class
 com\mycompany\mavenproject4\EditProfilController.class
@@ -7,8 +9,11 @@ com\mycompany\mavenproject4\LupaPassController.class
 com\mycompany\mavenproject4\Model.class
 com\mycompany\mavenproject4\UserLogin.class
 com\mycompany\mavenproject4\UbahPasswordController.class
+com\mycompany\mavenproject4\ResikoPenyakitController.class
 com\mycompany\mavenproject4\SignUpController.class
 com\mycompany\mavenproject4\HistoryController.class
 com\mycompany\mavenproject4\TambahDataController.class
+com\mycompany\mavenproject4\AnalisisDataController.class
 com\mycompany\mavenproject4\DataRiwayat.class
 com\mycompany\mavenproject4\Db.class
+com\mycompany\mavenproject4\ListMakananController.class

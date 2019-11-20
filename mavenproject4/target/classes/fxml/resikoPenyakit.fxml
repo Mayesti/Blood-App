@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.mavenproject4.ResikoPenyakitController">
+   <children>
+      <AnchorPane layoutY="59.0" prefHeight="483.0" prefWidth="801.0" style="-fx-background-color: #fecccc;">
+         <children>
+            <AnchorPane prefHeight="483.0" prefWidth="213.0" style="-fx-background-color: #800000;">
+               <children>
+                  <Button blendMode="SCREEN" layoutX="20.0" layoutY="72.0" mnemonicParsing="false" onAction="#listMakanan" prefHeight="50.0" prefWidth="174.0" text="List Makanan">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="SCREEN" layoutX="20.0" layoutY="171.0" mnemonicParsing="false" onAction="#resikoPenyakit" prefHeight="50.0" prefWidth="174.0" text="Resiko Penyakit">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="SCREEN" layoutX="20.0" layoutY="261.0" mnemonicParsing="false" onAction="#olahraga" prefHeight="50.0" prefWidth="174.0" text="Olahraga">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button blendMode="SCREEN" layoutX="20.0" layoutY="355.0" mnemonicParsing="false" onAction="#caraPenanganan" prefHeight="50.0" prefWidth="174.0" text="Cara Penanganan">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="406.0" layoutY="26.0" prefHeight="36.0" prefWidth="262.0" text="RESIKO PENYAKIT">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="586.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnUbahPass" style="-fx-background-color: transparent;" text="Ubah Password" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="722.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnLogout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="7.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">
+         <font>
+            <Font name="Forte" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="76.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@blood-donation-pngrepo-com.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

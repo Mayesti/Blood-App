@@ -141,6 +141,19 @@ public class HistoryController implements Initializable {
             }
         }
     }
+    @FXML
+    private void btnHasilAnalisis(ActionEvent event){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/analisisData.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

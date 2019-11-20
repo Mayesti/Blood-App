@@ -43,6 +43,11 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
+            <Button fx:id="btnEdit1" layoutX="356.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnHasilAnalisis" prefHeight="39.0" prefWidth="154.0" style="-fx-background-radius: 50;" text="Hasil Analisis">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">
