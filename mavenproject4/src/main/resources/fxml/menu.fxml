@@ -13,7 +13,7 @@
    <children>
       <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
          <children>
-            <Button layoutX="213.0" layoutY="213.0" mnemonicParsing="false" onAction="#btntambahdata" prefHeight="39.0" prefWidth="149.0" style="-fx-background-radius: 50;" text="Tambah Data">
+            <Button layoutX="130.0" layoutY="279.0" mnemonicParsing="false" onAction="#btntambahdata" prefHeight="39.0" prefWidth="149.0" style="-fx-background-radius: 50;" text="Tambah Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -21,12 +21,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label layoutX="359.0" layoutY="24.0" text="MENU" textFill="WHITE">
+            <Label layoutX="359.0" layoutY="54.0" text="MENU" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="438.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnriwayat" prefHeight="39.0" prefWidth="149.0" style="-fx-background-radius: 50;" text="Riwayat Data">
+            <Button layoutX="326.0" layoutY="279.0" mnemonicParsing="false" onAction="#btnriwayat" prefHeight="39.0" prefWidth="149.0" style="-fx-background-radius: 50;" text="Riwayat Data">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -34,7 +34,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="213.0" layoutY="388.0" mnemonicParsing="false" onAction="#btnanalisis" prefHeight="39.0" prefWidth="149.0" style="-fx-background-radius: 50;" text="Analisis Data">
+            <Button layoutX="522.0" layoutY="279.0" mnemonicParsing="false" onAction="#btngrafik" prefHeight="39.0" prefWidth="149.0" style="-fx-background-radius: 50;" text="Grafik">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -42,32 +42,19 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="438.0" layoutY="388.0" mnemonicParsing="false" onAction="#btngrafik" prefHeight="39.0" prefWidth="149.0" style="-fx-background-radius: 50;" text="Grafik">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <ImageView fitHeight="103.0" fitWidth="107.0" layoutX="461.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="103.0" fitWidth="107.0" layoutX="349.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@11143-200.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="103.0" fitWidth="107.0" layoutX="236.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="103.0" fitWidth="107.0" layoutX="153.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="85.0" fitWidth="82.0" layoutX="472.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="85.0" fitWidth="82.0" layoutX="556.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@stats-graphic.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="103.0" fitWidth="91.0" layoutX="242.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@iconfinder_6_2529927.png" />
                </image>
             </ImageView>
          </children>
