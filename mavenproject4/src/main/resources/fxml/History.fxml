@@ -13,7 +13,7 @@
    <children>
       <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
          <children>
-            <Label layoutX="322.0" layoutY="27.0" text="RIWAYAT DATA" textFill="WHITE">
+            <Label layoutX="322.0" layoutY="14.0" text="RIWAYAT DATA" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
@@ -23,14 +23,16 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <TableView fx:id="tvRiwayat" layoutX="81.0" layoutY="81.0" prefHeight="309.0" prefWidth="639.0">
+            <TableView fx:id="tvRiwayat" layoutX="38.0" layoutY="146.0" prefHeight="248.0" prefWidth="727.0">
               <columns>
-                <TableColumn fx:id="columnTanggal" prefWidth="132.0" text="Tanggal" />
-                <TableColumn fx:id="columnSistolik" prefWidth="100.0" text="Sistolik" />
-                <TableColumn fx:id="columnDiastolik" prefWidth="94.0" text="Diastolik" />
-                <TableColumn fx:id="columnPulse" prefWidth="98.0" text="Pulse" />
-                <TableColumn fx:id="columnKadarGulaDarah" prefWidth="104.0" text="Kadar Gula" />
-                <TableColumn fx:id="columnBeratBadan" minWidth="0.0" prefWidth="109.0" text="Berat Badan" />
+                <TableColumn fx:id="columnTanggal" prefWidth="118.0" text="Tanggal" />
+                <TableColumn fx:id="columnSistolik" prefWidth="83.0" text="Sistol" />
+                <TableColumn fx:id="columnDiastolik" prefWidth="92.0" text="Diastol" />
+                <TableColumn fx:id="columnPulse" prefWidth="84.0" text="Pulse" />
+                <TableColumn fx:id="columnKadarGulaDarah" prefWidth="129.0" text="Kadar Gula" />
+                <TableColumn fx:id="columnBeratBadan" minWidth="0.0" prefWidth="66.0" text="BB" />
+                  <TableColumn fx:id="columnTekananDarah" minWidth="0.0" prefWidth="76.0" text="DTD" />
+                  <TableColumn fx:id="columnTekananDarah" minWidth="0.0" prefWidth="78.0" text="DGD" />
               </columns>
             </TableView>
             <Button fx:id="btnEdit" layoutX="521.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnEditOnAction" prefHeight="39.0" prefWidth="93.0" style="-fx-background-radius: 50;" text="Edit">
@@ -48,6 +50,18 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
+            <Label layoutX="38.0" layoutY="119.0" prefHeight="27.0" prefWidth="727.0" text="Ket. BB=berat badan, DTD=diagnosa tekanan darah, DGD=diagnosa gula darah" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="439.0" layoutY="79.0" text="Cari" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfcari" layoutX="480.0" layoutY="73.0" />
+            <Button layoutX="704.0" layoutY="73.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="62.0" text="Cari" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">
