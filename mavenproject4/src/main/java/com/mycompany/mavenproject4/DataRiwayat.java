@@ -19,13 +19,17 @@ public class DataRiwayat {
     private Integer pulse;
     private Integer gulaDarah;
     private Integer beratBadan;
-    public DataRiwayat(String tanggal,int sistolik,int diastolik,int pulse,int gulaDarah,int beratBadan){
+    private String diagnosaTekananDarah;
+    private String diagnosaGulaDarah;
+    public DataRiwayat(String tanggal,int sistolik,int diastolik,int pulse,int gulaDarah,int beratBadan,String diagnosaTekananDarah,String diagnosaGulaDarah){
         this.tanggal=tanggal;
         this.sistolik=sistolik;
         this.diastolik=diastolik;
         this.pulse=pulse;
         this.gulaDarah=gulaDarah;
         this.beratBadan=beratBadan;
+        this.diagnosaTekananDarah=diagnosaTekananDarah;
+        this.diagnosaGulaDarah=diagnosaGulaDarah;
     }
 
     /**
@@ -110,5 +114,33 @@ public class DataRiwayat {
      */
     public void setBeratBadan(Integer beratBadan) {
         this.beratBadan = beratBadan;
+    }
+    
+    /**
+     * @return the diagnosaTekananDarah
+     */
+    public String getDiagnosaTekananDarah() {
+        return diagnosaTekananDarah;
+    }
+
+    /**
+     * @param diagnosaTekananDarah the diagnosaTekananDarah to set
+     */
+    public void setDiagnosaTekananDarah(String diagnosaTekananDarah) {
+        this.diagnosaTekananDarah = diagnosaTekananDarah;
+    }
+
+    /**
+     * @return the diagnosaGulaDarah
+     */
+    public String getDiagnosaGulaDarah() {
+        return diagnosaGulaDarah;
+    }
+
+    /**
+     * @param diagnosaGulaDarah the diagnosaGulaDarah to set
+     */
+    public void setDiagnosaGulaDarah(String diagnosaGulaDarah) {
+        this.diagnosaGulaDarah = diagnosaGulaDarah;
     }
 }

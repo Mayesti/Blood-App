@@ -75,7 +75,7 @@ public class EditDataController implements Initializable {
         int beratint = Integer.parseInt(berat);
 //        int tinggiint = Integer.parseInt(tinggi);
         
-        if((sistolint <30) || (sistolint >145) || (diastolint <60) || (diastolint >110) || (pulseint <50) || (pulseint >120) || (gulaint <80) || (gulaint >140) || (beratint <20) || (beratint >200)){
+        if((sistolint <50) || (sistolint >200) || (diastolint <30) || (diastolint >120) || (pulseint <30) || (pulseint >120) || (gulaint <30) || (gulaint >500) || (beratint <20) || (beratint >200)){
             showMessageDialog(null, "Angka tidak valid!");
         }else{
             String sql="UPDATE data SET sistol="+sistol+",diastol="+diastol+",pulse="+pulse+",gula_darah="+gula+",berat="+berat+", waktu_tambah='"+tanggal+"' WHERE id_data="+idData;
