@@ -24,9 +24,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
@@ -42,6 +45,20 @@ public class HistoryController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+    ObservableList<DataRiwayat> data = FXCollections.observableArrayList();
+    
+    ObservableList<DataRiwayat> listHasilPencarian = FXCollections.observableArrayList();
+    
+    @FXML
+    private TextField tfCari;
+    
+    @FXML
+    private RadioButton rbTanggal;
+    
+    @FXML
+    private RadioButton rbDiagnosa;
+    
     @FXML
     private TableView<DataRiwayat> tvRiwayat;
     
@@ -73,7 +90,6 @@ public class HistoryController implements Initializable {
     
     private void loadData(){
         try{
-            ObservableList<DataRiwayat> data = FXCollections.observableArrayList();
             String sql="SELECT * FROM data WHERE username='"+UserLogin.username+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
@@ -99,7 +115,7 @@ public class HistoryController implements Initializable {
                 else if(gulaDarah>=70 && gulaDarah<=200)
                     diagnosaGulaDarah="Normal";
                 else if(gulaDarah>200)
-                    diagnosaGulaDarah="Diabetes";
+                    diagnosaGulaDarah="Hiperglikemia";
                 data.add(new DataRiwayat(tanggal,sistolik,diastolik,pulse,gulaDarah,berat,diagnosaTekananDarah,diagnosaGulaDarah));
             }
             tvRiwayat.setItems(data);
@@ -175,6 +191,34 @@ public class HistoryController implements Initializable {
         }
     }
     
+    @FXML
+    private void btnCariOnAction(ActionEvent event){
+        listHasilPencarian.clear();
+        String keyword=tfCari.getText();
+        if(rbTanggal.isSelected()){
+            for(int i=0;i<data.size();i++){
+                String tmpTanggal=data.get(i).getTanggal();
+                if(tmpTanggal.contains(keyword))
+                    listHasilPencarian.add(data.get(i));
+            }
+            tvRiwayat.setItems(listHasilPencarian);
+        }
+        else if(rbDiagnosa.isSelected()){
+            for(int i=0;i<data.size();i++){
+                String tmpDiagnosaTekananDarah=data.get(i).getDiagnosaTekananDarah();
+                String tmpDiagnosaGulaDarah=data.get(i).getDiagnosaGulaDarah();
+                if(tmpDiagnosaTekananDarah.contains(keyword) || tmpDiagnosaGulaDarah.contains(keyword))
+                    listHasilPencarian.add(data.get(i));
+            }
+            tvRiwayat.setItems(listHasilPencarian);
+        }
+    }
+    
+    @FXML
+    private void btnRefreshOnAction(ActionEvent event){
+        tvRiwayat.setItems(data);
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         listIdData=new ArrayList<Integer>();
@@ -186,6 +230,10 @@ public class HistoryController implements Initializable {
         columnBeratBadan.setCellValueFactory(new PropertyValueFactory<DataRiwayat,Integer>("beratBadan"));
         columnDiagnosaTekananDarah.setCellValueFactory(new PropertyValueFactory<DataRiwayat,String>("diagnosaTekananDarah"));
         columnDiagnosaGulaDarah.setCellValueFactory(new PropertyValueFactory<DataRiwayat,String>("diagnosaGulaDarah"));
+        ToggleGroup grupRbJenisPencarian=new ToggleGroup();
+        rbTanggal.setToggleGroup(grupRbJenisPencarian);
+        rbDiagnosa.setToggleGroup(grupRbJenisPencarian);
+        rbTanggal.setSelected(true);
         loadData();
     }    
     

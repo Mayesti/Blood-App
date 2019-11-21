@@ -25,12 +25,12 @@
             </Button>
             <TableView fx:id="tvRiwayat" layoutX="38.0" layoutY="146.0" prefHeight="248.0" prefWidth="727.0">
               <columns>
-                <TableColumn fx:id="columnTanggal" prefWidth="114.0" text="Tanggal" />
-                <TableColumn fx:id="columnSistolik" prefWidth="60.0" text="Sistol" />
-                <TableColumn fx:id="columnDiastolik" prefWidth="72.0" text="Diastol" />
-                <TableColumn fx:id="columnPulse" prefWidth="54.0" text="Pulse" />
-                <TableColumn fx:id="columnKadarGulaDarah" prefWidth="106.0" text="Kadar Gula" />
-                <TableColumn fx:id="columnBeratBadan" minWidth="0.0" prefWidth="53.0" text="BB" />
+                <TableColumn fx:id="columnTanggal" prefWidth="93.0" text="Tanggal" />
+                <TableColumn fx:id="columnSistolik" prefWidth="72.0" text="Sistol" />
+                <TableColumn fx:id="columnDiastolik" prefWidth="69.0" text="Diastol" />
+                <TableColumn fx:id="columnPulse" prefWidth="75.0" text="Pulse" />
+                <TableColumn fx:id="columnKadarGulaDarah" prefWidth="74.0" text="Kadar Gula" />
+                <TableColumn fx:id="columnBeratBadan" minWidth="0.0" prefWidth="76.0" text="BB" />
                   <TableColumn fx:id="columnDiagnosaTekananDarah" minWidth="0.0" prefWidth="130.0" text="DTD" />
                   <TableColumn fx:id="columnDiagnosaGulaDarah" minWidth="0.0" prefWidth="137.0" text="DGD" />
               </columns>
@@ -55,13 +55,26 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="439.0" layoutY="79.0" text="Cari" textFill="WHITE">
+            <TextField fx:id="tfCari" layoutX="551.0" layoutY="56.0" />
+            <Button layoutX="704.0" layoutY="55.0" mnemonicParsing="false" onAction="#btnCariOnAction" prefHeight="27.0" prefWidth="62.0" text="Cari">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <RadioButton fx:id="rbTanggal" layoutX="551.0" layoutY="90.0" mnemonicParsing="false" text="Tanggal" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
                </font>
-            </Label>
-            <TextField fx:id="tfcari" layoutX="480.0" layoutY="73.0" />
-            <Button layoutX="704.0" layoutY="73.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="62.0" text="Cari" />
+            </RadioButton>
+            <RadioButton fx:id="rbDiagnosa" layoutX="627.0" layoutY="90.0" mnemonicParsing="false" text="Diagnosa" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </RadioButton>
+            <Button layoutX="704.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnRefreshOnAction" prefHeight="27.0" prefWidth="62.0" text="Refresh">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">
