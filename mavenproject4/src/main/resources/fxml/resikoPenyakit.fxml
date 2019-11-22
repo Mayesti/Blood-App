@@ -45,11 +45,20 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Button blendMode="SCREEN" layoutX="30.0" layoutY="45.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="174.0" text="Riwayat">
+            <Button blendMode="SCREEN" layoutX="30.0" layoutY="45.0" mnemonicParsing="false" onAction="#riwayat" prefHeight="50.0" prefWidth="174.0" text="Riwayat">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
+            <Label fx:id="lblDiagnosaGulaDarah" layoutX="459.0" layoutY="97.0" text="Normal" />
+            <Label fx:id="lblDiagnosaTekananDarah" layoutX="459.0" layoutY="70.0" text="Normal" />
+            <Label layoutX="279.0" layoutY="97.0" text="Diagnosa Gula Darah:" />
+            <Label layoutX="249.0" layoutY="70.0" text="Diagnosa Tekanan Darah:" />
+            <TableView fx:id="tvDaftarPenyakit" layoutX="384.0" layoutY="138.0" prefHeight="319.0" prefWidth="293.0">
+               <columns>
+                  <TableColumn fx:id="colNamaPenyakit" prefWidth="292.0" text="Nama Penyakit" />
+               </columns>
+            </TableView>
          </children>
       </AnchorPane>
       <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">

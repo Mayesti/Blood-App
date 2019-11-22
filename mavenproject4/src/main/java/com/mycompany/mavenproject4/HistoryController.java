@@ -90,6 +90,7 @@ public class HistoryController implements Initializable {
     
     private void loadData(){
         try{
+            
             String sql="SELECT * FROM data WHERE username='"+UserLogin.username+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
@@ -179,10 +180,15 @@ public class HistoryController implements Initializable {
     }
     @FXML
     private void btnHasilAnalisis(ActionEvent event){
+        int selectedRowIdx=tvRiwayat.getSelectionModel().getSelectedIndex();
+        String diagnosaTekananDarah=columnDiagnosaTekananDarah.getCellObservableValue(selectedRowIdx).getValue();
+        String diagnosaGulaDarah=columnDiagnosaGulaDarah.getCellObservableValue(selectedRowIdx).getValue();
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/fxml/analisisData.fxml"));
-            Scene scene = new Scene(root);
+            FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/analisisData.fxml"));
+            Scene scene = new Scene((Parent)root.load());
             scene.getStylesheets().add("/style/Style.css");
+            AnalisisDataController analisisDataController=root.getController();
+            analisisDataController.initDiagnosaData(diagnosaTekananDarah,diagnosaGulaDarah);
             Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
             window.setScene(scene);
             window.show();

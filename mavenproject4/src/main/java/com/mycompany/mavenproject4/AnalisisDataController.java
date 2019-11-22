@@ -31,10 +31,17 @@ public class AnalisisDataController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    private String dtd,dgd;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    public void initDiagnosaData(String dtd,String dgd){
+        this.dtd=dtd;
+        this.dgd=dgd;
+    }
+    
     @FXML
     private void listMakanan(ActionEvent event) throws IOException {
     Parent root = FXMLLoader.load(getClass().getResource("/fxml/listMakanan.fxml"));
@@ -47,9 +54,10 @@ public class AnalisisDataController implements Initializable {
 
     @FXML
     private void resikoPenyakit(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/resikoPenyakit.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/style/Style.css");
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/resikoPenyakit.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        ResikoPenyakitController resikoPenyakitController=root.getController();
+        resikoPenyakitController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();  
@@ -116,4 +124,17 @@ public class AnalisisDataController implements Initializable {
         }
     }
     
+    @FXML
+    private void riwayat(ActionEvent event){
+       try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/History.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
+    }
 }
