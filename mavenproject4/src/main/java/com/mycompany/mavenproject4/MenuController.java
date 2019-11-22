@@ -63,15 +63,19 @@ public class MenuController implements Initializable {
             showMessageDialog(null,e.getMessage());
         }
     }
-
-    @FXML
-    private void btnanalisis(ActionEvent event){
-       
-    }
     
     @FXML
     private void btngrafik(ActionEvent event){
-       
+       try {
+            Parent root = FXMLLoader.load(getClass().getResource("/fxml/Grafik.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add("/style/Style.css");
+            Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+        } catch(Exception e) {
+            showMessageDialog(null,e.getMessage());
+        }
     }
     
     @FXML
