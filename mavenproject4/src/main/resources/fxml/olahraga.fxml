@@ -50,6 +50,15 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
+            <Label layoutX="259.0" layoutY="71.0" text="Diagnosa Tekanan Darah:" />
+            <Label layoutX="289.0" layoutY="98.0" text="Diagnosa Gula Darah:" />
+            <Label fx:id="lblDiagnosaTekananDarah" layoutX="469.0" layoutY="71.0" text="Normal" />
+            <Label fx:id="lblDiagnosaGulaDarah" layoutX="469.0" layoutY="98.0" text="Normal" />
+            <TableView fx:id="tvDaftarOlahraga" layoutX="377.0" layoutY="143.0" prefHeight="319.0" prefWidth="293.0">
+               <columns>
+                  <TableColumn fx:id="colOlahraga" prefWidth="292.0" text="Olahraga" />
+               </columns>
+            </TableView>
          </children>
       </AnchorPane>
       <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">

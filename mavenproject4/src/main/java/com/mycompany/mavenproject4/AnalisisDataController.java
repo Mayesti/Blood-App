@@ -65,12 +65,13 @@ public class AnalisisDataController implements Initializable {
 
     @FXML
     private void olahraga(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/resikoPeyakit.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/style/Style.css");
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/olahraga.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        OlahragaController olahragaController=root.getController();
+        olahragaController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        window.show();
+        window.show();  
     }
 
     @FXML

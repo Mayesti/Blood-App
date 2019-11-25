@@ -7,7 +7,13 @@ package com.mycompany.mavenproject4;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +21,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -24,11 +34,47 @@ import static javax.swing.JOptionPane.showMessageDialog;
  *
  * @author ASUS
  */
+
 public class OlahragaController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
+    private String dtd,dgd;
+    
+    private ObservableList<Olahraga> listOlahraga = FXCollections.observableArrayList();
+    
+    @FXML
+    private Label lblDiagnosaTekananDarah,lblDiagnosaGulaDarah;
+    
+    @FXML
+    private TableView tvDaftarOlahraga;
+    
+    @FXML
+    private TableColumn<Olahraga,String> colOlahraga;
+    
+    public void initDiagnosaData(String dtd,String dgd){
+        this.dtd=dtd;
+        this.dgd=dgd;
+        lblDiagnosaTekananDarah.setText(dtd);
+        lblDiagnosaGulaDarah.setText(dgd);
+        colOlahraga.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("namaOlahraga"));
+        listOlahraga.clear();
+        try{
+            String sql="SELECT nama_olahraga FROM olahraga WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            Connection con=Db.connectDB();
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery(sql);
+            while(rs.next()){
+                listOlahraga.add(new Olahraga(rs.getString("nama_olahraga")));
+            }
+            tvDaftarOlahraga.setItems(listOlahraga);
+        }
+        catch(SQLException e){
+            
+        }
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -46,9 +92,10 @@ public class OlahragaController implements Initializable {
 
     @FXML
     private void resikoPenyakit(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/resikoPenyakit.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/style/Style.css");
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/resikoPenyakit.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        ResikoPenyakitController resikoPenyakitController=root.getController();
+        resikoPenyakitController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();  

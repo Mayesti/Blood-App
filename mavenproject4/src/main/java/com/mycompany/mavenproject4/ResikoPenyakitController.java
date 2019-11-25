@@ -43,13 +43,14 @@ public class ResikoPenyakitController implements Initializable {
     
     private ObservableList<Penyakit> listPenyakit = FXCollections.observableArrayList();
     
+    
     @FXML
     private Label lblDiagnosaTekananDarah,lblDiagnosaGulaDarah;
     
     @FXML
     private TableView tvDaftarPenyakit;
     
-     @FXML
+    @FXML
     private TableColumn<Penyakit,String> colNamaPenyakit;
     
     public void initDiagnosaData(String dtd,String dgd){
@@ -101,12 +102,13 @@ public class ResikoPenyakitController implements Initializable {
 
     @FXML
     private void olahraga(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/olahraga.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/style/Style.css");
+    FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/olahraga.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        OlahragaController olahragaController=root.getController();
+        olahragaController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        window.show();
+        window.show();  
     }
 
     @FXML
