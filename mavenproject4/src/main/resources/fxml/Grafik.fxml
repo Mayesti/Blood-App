@@ -15,10 +15,16 @@
          <children>
             <LineChart fx:id="chart" layoutX="148.0" layoutY="102.0" prefHeight="316.0" prefWidth="504.0">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis label="Tanggal" side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxis">
+                     <tickLabelFont>
+                        <Font size="10.0" />
+                     </tickLabelFont></CategoryAxis>
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis fx:id="yAxis" label="mmHg" side="LEFT" tickLabelFill="WHITE">
+                     <tickLabelFont>
+                        <Font size="10.0" />
+                     </tickLabelFont></NumberAxis>
               </yAxis>
             </LineChart>
             <Label layoutX="352.0" layoutY="14.0" text="GRAFIK" textFill="WHITE">
