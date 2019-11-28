@@ -200,8 +200,8 @@ public class HistoryController implements Initializable {
     @FXML
     private void btnCariOnAction(ActionEvent event){
         listHasilPencarian.clear();
-        String keyword=tfCari.getText();
         if(rbTanggal.isSelected()){
+            String keyword=tfCari.getText();
             for(int i=0;i<data.size();i++){
                 String tmpTanggal=data.get(i).getTanggal();
                 if(tmpTanggal.contains(keyword))
@@ -210,6 +210,8 @@ public class HistoryController implements Initializable {
             tvRiwayat.setItems(listHasilPencarian);
         }
         else if(rbDiagnosa.isSelected()){
+            String keyword=tfCari.getText();
+            keyword=keyword.substring(0,1).toUpperCase() + keyword.substring(1).toLowerCase();
             for(int i=0;i<data.size();i++){
                 String tmpDiagnosaTekananDarah=data.get(i).getDiagnosaTekananDarah();
                 String tmpDiagnosaGulaDarah=data.get(i).getDiagnosaGulaDarah();

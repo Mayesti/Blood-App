@@ -13,7 +13,7 @@
    <children>
       <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
          <children>
-            <LineChart layoutX="148.0" layoutY="88.0" prefHeight="316.0" prefWidth="504.0">
+            <LineChart fx:id="chart" layoutX="148.0" layoutY="102.0" prefHeight="316.0" prefWidth="504.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -21,16 +21,17 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </LineChart>
-            <Label layoutX="359.0" layoutY="39.0" text="GRAFIK" textFill="WHITE">
+            <Label layoutX="352.0" layoutY="14.0" text="GRAFIK" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Label>
-            <Button layoutX="46.0" layoutY="404.0" mnemonicParsing="false" onAction="#btnBack" style="-fx-background-radius: 50;" text="Kembali">
+            <Button layoutX="46.0" layoutY="418.0" mnemonicParsing="false" onAction="#btnBack" style="-fx-background-radius: 50;" text="Kembali">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
+            <ComboBox fx:id="cbJenis" layoutX="325.0" layoutY="77.0" onAction="#cbJenisOnAction" prefWidth="150.0" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="8.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">
