@@ -54,33 +54,27 @@
             <Label layoutX="296.0" layoutY="98.0" text="Diagnosa Gula Darah:" />
             <Label fx:id="lblDiagnosaTekananDarah" layoutX="476.0" layoutY="71.0" text="Normal" />
             <Label fx:id="lblDiagnosaGulaDarah" layoutX="476.0" layoutY="98.0" text="Normal" />
-            <TableView fx:id="tvDaftarPenyakit" layoutX="374.0" layoutY="142.0" prefHeight="319.0" prefWidth="293.0">
+            <TableView fx:id="tvDaftarMakanan" layoutX="245.0" layoutY="138.0" prefHeight="319.0" prefWidth="548.0">
                <columns>
-                  <TableColumn fx:id="colNamaPenyakit" prefWidth="292.0" text="Nama Penyakit" />
+                  <TableColumn fx:id="colJenisMakanan" prefWidth="154.0" text="Jenis Makanan" />
+                  <TableColumn fx:id="colPorsi" prefWidth="88.0" text="Porsi" />
+                  <TableColumn fx:id="colNamaMakanan" prefWidth="139.0" text="Nama Makanan" />
+                  <TableColumn fx:id="colKeterangan" prefWidth="166.0" text="Keterangan" />
                </columns>
             </TableView>
          </children>
       </AnchorPane>
       <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Button layoutX="586.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnUbahPass" style="-fx-background-color: transparent;" text="Ubah Password" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Button layoutX="722.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnLogout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

@@ -7,7 +7,13 @@ package com.mycompany.mavenproject4;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +21,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -30,6 +39,54 @@ public class ListMakananController implements Initializable {
      * Initializes the controller class.
      */
     private String dtd,dgd;
+    
+    private ObservableList<Makanan> listMakanan = FXCollections.observableArrayList();
+    
+    
+    @FXML
+    private Label lblDiagnosaTekananDarah,lblDiagnosaGulaDarah;
+    
+    @FXML
+    private TableView tvDaftarMakanan;
+    
+    @FXML
+    private TableColumn<Makanan,String> colJenisMakanan;
+    
+    @FXML
+    private TableColumn<Makanan,String> colPorsi;
+    
+    @FXML
+    private TableColumn<Makanan,String> colNamaMakanan;
+    
+    @FXML
+    private TableColumn<Makanan,String> colKeterangan;
+       
+    public void initDiagnosaData(String dtd,String dgd){
+        this.dtd=dtd;
+        this.dgd=dgd;
+        lblDiagnosaTekananDarah.setText(dtd);
+        lblDiagnosaGulaDarah.setText(dgd);
+//        colNamaMakanan.setCellValueFactory(new PropertyValueFactory<Makanan,String>("namaMakanan"));
+//        listMakanan.clear();
+//        try{
+//            String sql="SELECT jenis,porsi,contoh,keterangan FROM makanan WHERE diagnosa_tekanan='"+dtd+"' OR diagnosa_gula='"+dgd+"'";
+//            Connection con=Db.connectDB();
+//            Statement stmt=con.createStatement();
+//            ResultSet rs=stmt.executeQuery(sql);
+//            while(rs.next()){
+//                listMakanan.add(new Makanan(rs.getString("jenis")));
+//                listMakanan.add(new Makanan(rs.getString("porsi")));
+//                listMakanan.add(new Makanan(rs.getString("contoh")));
+//                listMakanan.add(new Makanan(rs.getString("keterangan")));
+//                
+//            }
+//            tvDaftarMakanan.setItems(listMakanan);
+//        }
+//        catch(SQLException e){
+//            
+//        }
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -47,10 +104,9 @@ public class ListMakananController implements Initializable {
 
     @FXML
     private void resikoPenyakit(ActionEvent event) throws IOException {
-        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/resikoPenyakit.fxml"));
-        Scene scene = new Scene((Parent)root.load());
-        ResikoPenyakitController resikoPenyakitController=root.getController();
-        resikoPenyakitController.initDiagnosaData(dtd, dgd);
+    Parent root = FXMLLoader.load(getClass().getResource("/fxml/resikoPenyakit.fxml"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add("/style/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();  
@@ -64,7 +120,7 @@ public class ListMakananController implements Initializable {
         olahragaController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        window.show();
+        window.show();  
     }
 
     @FXML
@@ -90,7 +146,8 @@ public class ListMakananController implements Initializable {
             showMessageDialog(null,e.getMessage());
         }
     }
-    @FXML
+
+   @FXML
     private void btnEditProfil(ActionEvent event){
        try {
             Parent root = FXMLLoader.load(getClass().getResource("/fxml/editProfil.fxml"));

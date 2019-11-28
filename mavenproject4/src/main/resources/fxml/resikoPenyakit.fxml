@@ -62,25 +62,18 @@
          </children>
       </AnchorPane>
       <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Button layoutX="586.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnUbahPass" style="-fx-background-color: transparent;" text="Ubah Password" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
+    
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
       <Button layoutX="722.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnLogout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
+       
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
