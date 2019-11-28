@@ -44,8 +44,10 @@ public class AnalisisDataController implements Initializable {
     
     @FXML
     private void listMakanan(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/listMakanan.fxml"));
-        Scene scene = new Scene(root);
+        FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/listMakanan.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        ListMakananController listMakananController=root.getController();
+        listMakananController.initDiagnosaData(dtd, dgd);
         scene.getStylesheets().add("/style/Style.css");
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);

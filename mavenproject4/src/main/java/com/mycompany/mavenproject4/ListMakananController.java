@@ -66,25 +66,28 @@ public class ListMakananController implements Initializable {
         this.dgd=dgd;
         lblDiagnosaTekananDarah.setText(dtd);
         lblDiagnosaGulaDarah.setText(dgd);
-//        colNamaMakanan.setCellValueFactory(new PropertyValueFactory<Makanan,String>("namaMakanan"));
-//        listMakanan.clear();
-//        try{
-//            String sql="SELECT jenis,porsi,contoh,keterangan FROM makanan WHERE diagnosa_tekanan='"+dtd+"' OR diagnosa_gula='"+dgd+"'";
-//            Connection con=Db.connectDB();
-//            Statement stmt=con.createStatement();
-//            ResultSet rs=stmt.executeQuery(sql);
-//            while(rs.next()){
-//                listMakanan.add(new Makanan(rs.getString("jenis")));
-//                listMakanan.add(new Makanan(rs.getString("porsi")));
-//                listMakanan.add(new Makanan(rs.getString("contoh")));
-//                listMakanan.add(new Makanan(rs.getString("keterangan")));
-//                
-//            }
-//            tvDaftarMakanan.setItems(listMakanan);
-//        }
-//        catch(SQLException e){
-//            
-//        }
+        colJenisMakanan.setCellValueFactory(new PropertyValueFactory<Makanan,String>("jenisMakanan"));
+        colPorsi.setCellValueFactory(new PropertyValueFactory<Makanan,String>("porsi"));
+        colNamaMakanan.setCellValueFactory(new PropertyValueFactory<Makanan,String>("namaMakanan"));
+        colKeterangan.setCellValueFactory(new PropertyValueFactory<Makanan,String>("keterangan"));
+        listMakanan.clear();
+        try{
+            String sql="SELECT jenis,porsi,contoh,keterangan FROM makanan WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            Connection con=Db.connectDB();
+            Statement stmt=con.createStatement();
+            ResultSet rs=stmt.executeQuery(sql);
+            while(rs.next()){
+                String jenis=rs.getString("jenis");
+                String porsi=rs.getString("porsi");
+                String contoh=rs.getString("contoh");
+                String keterangan=rs.getString("keterangan");
+                listMakanan.add(new Makanan(jenis,porsi,contoh,keterangan));
+            }
+            tvDaftarMakanan.setItems(listMakanan);
+        }
+        catch(SQLException e){
+            showMessageDialog(null,e.getMessage());
+        }
     }
     
     @Override
