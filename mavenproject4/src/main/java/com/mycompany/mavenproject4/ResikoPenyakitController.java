@@ -53,8 +53,8 @@ public class ResikoPenyakitController implements Initializable {
     @FXML
     private TableColumn<Penyakit,String> colNamaPenyakit;
     
-    @FXML
-    private TableColumn<Penyakit,String> colKeterangan;
+//    @FXML
+//    private TableColumn<Penyakit,String> colKeterangan;
     
     public void initDiagnosaData(String dtd,String dgd){
         this.dtd=dtd;
@@ -62,18 +62,19 @@ public class ResikoPenyakitController implements Initializable {
         lblDiagnosaTekananDarah.setText(dtd);
         lblDiagnosaGulaDarah.setText(dgd);
         colNamaPenyakit.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("namaPenyakit"));
-        colKeterangan.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("keterangan"));
+//        colKeterangan.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("keterangan"));
         listPenyakit.clear();
         try{
-            String sql="SELECT nama_penyakit, keterangan FROM resiko_penyakit WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            String sql="SELECT nama_penyakit FROM resiko_penyakit WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery(sql);
             while(rs.next()){
-                String namaPenyakit = rs.getString("nama_penyakit");
-                String keterangan = rs.getString("keterangan");
-                
-                listPenyakit.add(new Penyakit(namaPenyakit, keterangan));
+//                String namaPenyakit = rs.getString("nama_penyakit");
+//                String keterangan = rs.getString("keterangan");
+//                
+//                listPenyakit.add(new Penyakit(namaPenyakit, keterangan));
+                  listPenyakit.add(new Penyakit(rs.getString("nama_penyakit")));
             }
             tvDaftarPenyakit.setItems(listPenyakit);
         }

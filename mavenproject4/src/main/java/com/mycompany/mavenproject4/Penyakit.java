@@ -11,11 +11,10 @@ package com.mycompany.mavenproject4;
  */
 public class Penyakit {
     private String namaPenyakit;
-    private String keterangan;
+//    private String keterangan;
     
-    public Penyakit(String namaPenyakit, String keterangan){
+    public Penyakit(String namaPenyakit){
         this.namaPenyakit=namaPenyakit;
-        this.keterangan=keterangan;
     }
 
     /**
@@ -35,16 +34,16 @@ public class Penyakit {
     /**
      * @return the keterangan
      */
-    public String getKeterangan() {
-        return keterangan;
-    }
-
-    /**
-     * @param keterangan the keterangan to set
-     */
-    public void setKeterangan(String keterangan) {
-        this.keterangan = keterangan;
-    }
+//    public String getKeterangan() {
+//        return keterangan;
+//    }
+//
+//    /**
+//     * @param keterangan the keterangan to set
+//     */
+//    public void setKeterangan(String keterangan) {
+//        this.keterangan = keterangan;
+//    }
 
     
     

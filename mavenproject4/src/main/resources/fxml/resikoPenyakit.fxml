@@ -56,8 +56,7 @@
             <Label layoutX="249.0" layoutY="70.0" text="Diagnosa Tekanan Darah:" />
             <TableView fx:id="tvDaftarPenyakit" layoutX="254.0" layoutY="138.0" prefHeight="319.0" prefWidth="531.0">
                <columns>
-                  <TableColumn fx:id="colNamaPenyakit" prefWidth="187.0" text="Nama Penyakit" />
-                  <TableColumn fx:id="colKeterangan" prefWidth="343.0" text="Keterangan" />
+                  <TableColumn fx:id="colNamaPenyakit" prefWidth="530.0" text="Nama Penyakit" />
                </columns>
             </TableView>
          </children>
