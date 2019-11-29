@@ -65,7 +65,7 @@ public class ResikoPenyakitController implements Initializable {
 //        colKeterangan.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("keterangan"));
         listPenyakit.clear();
         try{
-            String sql="SELECT nama_penyakit FROM resiko_penyakit WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            String sql="SELECT distinct nama_penyakit FROM resiko_penyakit WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery(sql);

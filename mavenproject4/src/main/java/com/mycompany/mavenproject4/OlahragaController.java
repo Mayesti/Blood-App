@@ -76,7 +76,7 @@ public class OlahragaController implements Initializable {
         listOlahraga.clear();
         
         try{
-            String sql="SELECT nama_olahraga, durasi, keterangan, fungsi FROM olahraga WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            String sql="SELECT distinct nama_olahraga, durasi, keterangan, fungsi FROM olahraga WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery(sql);
