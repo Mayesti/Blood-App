@@ -54,9 +54,10 @@
             <Label fx:id="lblDiagnosaTekananDarah" layoutX="459.0" layoutY="70.0" text="Normal" />
             <Label layoutX="279.0" layoutY="97.0" text="Diagnosa Gula Darah:" />
             <Label layoutX="249.0" layoutY="70.0" text="Diagnosa Tekanan Darah:" />
-            <TableView fx:id="tvDaftarPenyakit" layoutX="384.0" layoutY="138.0" prefHeight="319.0" prefWidth="293.0">
+            <TableView fx:id="tvDaftarPenyakit" layoutX="254.0" layoutY="138.0" prefHeight="319.0" prefWidth="531.0">
                <columns>
-                  <TableColumn fx:id="colNamaPenyakit" prefWidth="292.0" text="Nama Penyakit" />
+                  <TableColumn fx:id="colNamaPenyakit" prefWidth="187.0" text="Nama Penyakit" />
+                  <TableColumn fx:id="colKeterangan" prefWidth="343.0" text="Keterangan" />
                </columns>
             </TableView>
          </children>
