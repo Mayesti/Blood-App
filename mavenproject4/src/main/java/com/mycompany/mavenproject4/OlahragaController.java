@@ -51,22 +51,38 @@ public class OlahragaController implements Initializable {
     private TableView tvDaftarOlahraga;
     
     @FXML
-    private TableColumn<Olahraga,String> colOlahraga;
+    private TableColumn<Olahraga,String> colNamaOlahraga;
+    
+    @FXML
+    private TableColumn<Olahraga,String> colDurasi;
+     
+    @FXML
+    private TableColumn<Olahraga,String> colKeterangan;
+    
     
     public void initDiagnosaData(String dtd,String dgd){
         this.dtd=dtd;
         this.dgd=dgd;
         lblDiagnosaTekananDarah.setText(dtd);
         lblDiagnosaGulaDarah.setText(dgd);
-        colOlahraga.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("namaOlahraga"));
+        
+        colNamaOlahraga.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("namaOlahraga"));
+        colDurasi.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("durasi"));
+        colKeterangan.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("keterangan"));
+        
         listOlahraga.clear();
+        
         try{
-            String sql="SELECT nama_olahraga FROM olahraga WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            String sql="SELECT nama_olahraga, durasi, keterangan FROM olahraga WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery(sql);
             while(rs.next()){
-                listOlahraga.add(new Olahraga(rs.getString("nama_olahraga")));
+                String namaOlahraga = rs.getString("nama_olahraga");
+                String durasi = rs.getString("durasi");
+                String keterangan = rs.getString("keterangan");
+ 
+                listOlahraga.add(new Olahraga(namaOlahraga, durasi, keterangan));
             }
             tvDaftarOlahraga.setItems(listOlahraga);
         }
