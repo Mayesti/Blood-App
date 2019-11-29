@@ -13,12 +13,13 @@ public class Olahraga {
     private String namaOlahraga;
     private String durasi;
     private String keterangan;
+    private String fungsi;
     
-    
-    public Olahraga(String namaOlahraga, String durasi, String keterangan){
+    public Olahraga(String namaOlahraga, String durasi, String keterangan, String fungsi){
         this.namaOlahraga=namaOlahraga;
         this.durasi=durasi;
         this.keterangan=keterangan;
+        this.fungsi=fungsi;
     }
     
     public String getNamaOlahraga(){
@@ -54,5 +55,19 @@ public class Olahraga {
      */
     public void setKeterangan(String keterangan) {
         this.keterangan = keterangan;
+    }
+
+    /**
+     * @return the fungsi
+     */
+    public String getFungsi() {
+        return fungsi;
+    }
+
+    /**
+     * @param fungsi the fungsi to set
+     */
+    public void setFungsi(String fungsi) {
+        this.fungsi = fungsi;
     }
 }
