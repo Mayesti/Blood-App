@@ -53,8 +53,8 @@ public class ResikoPenyakitController implements Initializable {
     @FXML
     private TableColumn<Penyakit,String> colNamaPenyakit;
     
-//    @FXML
-//    private TableColumn<Penyakit,String> colKeterangan;
+    @FXML
+    private TableColumn<Penyakit,String> colGejala;
     
     public void initDiagnosaData(String dtd,String dgd){
         this.dtd=dtd;
@@ -62,7 +62,7 @@ public class ResikoPenyakitController implements Initializable {
         lblDiagnosaTekananDarah.setText(dtd);
         lblDiagnosaGulaDarah.setText(dgd);
         colNamaPenyakit.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("namaPenyakit"));
-//        colKeterangan.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("keterangan"));
+        colGejala.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("gejala"));
         listPenyakit.clear();
         if(this.dtd.equals("normal") && this.dtd.equals("normal")){
             tvDaftarPenyakit.setVisible(false);

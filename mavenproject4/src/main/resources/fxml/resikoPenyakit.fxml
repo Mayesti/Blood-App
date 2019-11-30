@@ -57,6 +57,7 @@
             <TableView fx:id="tvDaftarPenyakit" layoutX="254.0" layoutY="138.0" prefHeight="319.0" prefWidth="531.0">
                <columns>
                   <TableColumn fx:id="colNamaPenyakit" prefWidth="530.0" text="Nama Penyakit" />
+                  <TableColumn fx:id="colGejala" prefWidth="530.0" text="Gejala" />
                </columns>
             </TableView>
          </children>
