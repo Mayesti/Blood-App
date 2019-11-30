@@ -97,22 +97,24 @@ public class ListMakananController implements Initializable {
     
     @FXML
     private void listMakanan(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/listMakanan.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/style/Style.css");
+    FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/listMakanan.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        ListMakananController listMakananController=root.getController();
+        listMakananController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        window.show();
+        window.show(); 
     }
 
     @FXML
     private void resikoPenyakit(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/resikoPenyakit.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/style/Style.css");
+   FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/resikoPenyakit.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        ResikoPenyakitController resikoPenyakitController=root.getController();
+        resikoPenyakitController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        window.show();  
+        window.show();   
     }
 
     @FXML
@@ -128,12 +130,13 @@ public class ListMakananController implements Initializable {
 
     @FXML
     private void caraPenanganan(ActionEvent event) throws IOException {
-    Parent root = FXMLLoader.load(getClass().getResource("/fxml/caraPenanganan.fxml"));
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/style/Style.css");
+    FXMLLoader root = new FXMLLoader(getClass().getResource("/fxml/caraPenanganan.fxml"));
+        Scene scene = new Scene((Parent)root.load());
+        CaraPenangananController caraPenangananController=root.getController();
+        caraPenangananController.initDiagnosaData(dtd, dgd);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
-        window.show();
+        window.show();  
     }
 
     @FXML
