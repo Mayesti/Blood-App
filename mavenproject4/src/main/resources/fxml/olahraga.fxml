@@ -56,10 +56,9 @@
             <Label fx:id="lblDiagnosaGulaDarah" layoutX="469.0" layoutY="98.0" text="Normal" />
             <TableView fx:id="tvDaftarOlahraga" layoutX="257.0" layoutY="143.0" prefHeight="319.0" prefWidth="523.0">
                <columns>
-                  <TableColumn fx:id="colNamaOlahraga" prefWidth="160.0" text="Nama Olahraga" />
-                  <TableColumn fx:id="colDurasi" minWidth="0.0" prefWidth="82.0" text="Durasi" />
-                  <TableColumn fx:id="colKeterangan" prefWidth="126.0" text="Keterangan" />
-                  <TableColumn fx:id="colFungsi" prefWidth="154.0" text="Fungsi" />
+                  <TableColumn fx:id="colNamaOlahraga" prefWidth="214.0" text="Nama Olahraga" />
+                  <TableColumn fx:id="colDurasi" minWidth="0.0" prefWidth="105.0" text="Durasi" />
+                  <TableColumn fx:id="colKeterangan" prefWidth="203.0" text="Keterangan" />
                </columns>
             </TableView>
          </children>

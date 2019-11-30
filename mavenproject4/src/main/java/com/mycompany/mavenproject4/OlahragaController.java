@@ -58,9 +58,7 @@ public class OlahragaController implements Initializable {
      
     @FXML
     private TableColumn<Olahraga,String> colKeterangan;
-    
-    @FXML
-    private TableColumn<Olahraga,String> colFungsi;
+   
     
     public void initDiagnosaData(String dtd,String dgd){
         this.dtd=dtd;
@@ -71,12 +69,11 @@ public class OlahragaController implements Initializable {
         colNamaOlahraga.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("namaOlahraga"));
         colDurasi.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("durasi"));
         colKeterangan.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("keterangan"));
-        colFungsi.setCellValueFactory(new PropertyValueFactory<Olahraga,String>("fungsi"));
         
         listOlahraga.clear();
         
         try{
-            String sql="SELECT distinct nama_olahraga, durasi, keterangan, fungsi FROM olahraga WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            String sql="SELECT distinct nama_olahraga, durasi, keterangan FROM olahraga WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery(sql);
@@ -84,8 +81,7 @@ public class OlahragaController implements Initializable {
                 String namaOlahraga = rs.getString("nama_olahraga");
                 String durasi = rs.getString("durasi");
                 String keterangan = rs.getString("keterangan");
-                String fungsi = rs.getString("fungsi");
-                listOlahraga.add(new Olahraga(namaOlahraga, durasi, keterangan, fungsi));
+                listOlahraga.add(new Olahraga(namaOlahraga, durasi, keterangan));
             }
             tvDaftarOlahraga.setItems(listOlahraga);
         }
