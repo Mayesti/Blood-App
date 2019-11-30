@@ -64,22 +64,27 @@ public class ResikoPenyakitController implements Initializable {
         colNamaPenyakit.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("namaPenyakit"));
 //        colKeterangan.setCellValueFactory(new PropertyValueFactory<Penyakit,String>("keterangan"));
         listPenyakit.clear();
+        if(this.dtd.equals("normal") && this.dtd.equals("normal")){
+            tvDaftarPenyakit.setVisible(false);
+            colNamaPenyakit.setVisible(false);
+        }else{
         try{
-            String sql="SELECT distinct nama_penyakit FROM resiko_penyakit WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
+            String sql="SELECT distinct nama_penyakit, gejala FROM resiko_penyakit WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
             ResultSet rs=stmt.executeQuery(sql);
             while(rs.next()){
-//                String namaPenyakit = rs.getString("nama_penyakit");
-//                String keterangan = rs.getString("keterangan");
-//                
-//                listPenyakit.add(new Penyakit(namaPenyakit, keterangan));
-                  listPenyakit.add(new Penyakit(rs.getString("nama_penyakit")));
+                String namaPenyakit = rs.getString("nama_penyakit");
+                String gejala = rs.getString("gejala");
+                
+                listPenyakit.add(new Penyakit(namaPenyakit, gejala));
+//                  listPenyakit.add(new Penyakit(rs.getString("nama_penyakit")));
             }
             tvDaftarPenyakit.setItems(listPenyakit);
         }
         catch(SQLException e){
             
+        }
         }
     }
     
