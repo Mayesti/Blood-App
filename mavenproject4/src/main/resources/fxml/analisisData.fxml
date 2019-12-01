@@ -40,7 +40,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="376.0" mnemonicParsing="false" onAction="#caraPenanganan" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Cara Penanganan">
+                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="376.0" mnemonicParsing="false" onAction="#caraPenanganan" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Penanganan Lain">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -61,6 +61,16 @@
                   <DropShadow />
                </effect>
             </AnchorPane>
+            <Text layoutX="300.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Silakan pilih menu di samping untuk melihat hasil analisa/rekomendasi untuk kondisi kesehatan Anda" textAlignment="CENTER" wrappingWidth="433.0">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="186.0" fitWidth="257.0" layoutX="388.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Pengobatan_Alami_untuk_Hipotensi_Halodoc.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">

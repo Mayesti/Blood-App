@@ -42,7 +42,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="376.0" mnemonicParsing="false" onAction="#caraPenanganan" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Cara Penanganan">
+                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="376.0" mnemonicParsing="false" onAction="#caraPenanganan" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Penanganan Lain">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
@@ -63,7 +63,7 @@
                   <DropShadow />
                </effect>
             </AnchorPane>
-            <Label layoutX="386.0" layoutY="14.0" prefHeight="36.0" prefWidth="265.0" text="CARA PENANGANAN">
+            <Label layoutX="396.0" layoutY="14.0" prefHeight="36.0" prefWidth="247.0" text="PENANGANAN LAIN">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -86,8 +86,8 @@
                </font></Label>
             <TableView fx:id="tvDaftarPenanganan" layoutX="252.0" layoutY="138.0" prefHeight="319.0" prefWidth="532.0">
                <columns>
-                  <TableColumn fx:id="colKondisi" prefWidth="136.0" text="Kondisi Penderita" />
-                  <TableColumn fx:id="colHal" prefWidth="395.0" text="Pertolongan" />
+                  <TableColumn fx:id="colKondisi" prefWidth="124.0" text="Kategori" />
+                  <TableColumn fx:id="colHal" prefWidth="600.0" text="Keterangan" />
                </columns>
             </TableView>
          </children>
