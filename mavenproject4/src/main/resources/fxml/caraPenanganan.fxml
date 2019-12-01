@@ -90,6 +90,11 @@
                   <TableColumn fx:id="colHal" prefWidth="600.0" text="Keterangan" />
                </columns>
             </TableView>
+            <ImageView fitHeight="94.0" fitWidth="91.0" layoutX="660.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cara%20penanganan.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">

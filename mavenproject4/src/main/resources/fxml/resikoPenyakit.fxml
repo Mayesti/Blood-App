@@ -87,25 +87,35 @@
                   <TableColumn fx:id="colGejala" maxWidth="700.0" prefWidth="600.0" resizable="false" text="Gejala" />
                </columns>
             </TableView>
-            <Label fx:id="lbnormal" layoutX="448.0" layoutY="190.0" prefHeight="94.0" prefWidth="83.0">
+            <Label fx:id="lbnormal" layoutX="438.0" layoutY="190.0" prefHeight="94.0" prefWidth="143.0">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
                </font></Label>
-            <Label fx:id="lbnormal1" layoutX="522.0" layoutY="189.0" prefHeight="94.0" prefWidth="91.0">
+            <Label fx:id="lbnormal1" layoutX="512.0" layoutY="189.0" prefHeight="94.0" prefWidth="107.0">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbnormal2" layoutX="328.0" layoutY="242.0" prefHeight="62.0" prefWidth="376.0">
+            <Label fx:id="lbnormal2" layoutX="291.0" layoutY="242.0" prefHeight="62.0" prefWidth="474.0">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbnormal3" layoutX="415.0" layoutY="278.0" prefHeight="62.0" prefWidth="207.0">
+            <Label fx:id="lbnormal3" layoutX="382.0" layoutY="276.0" prefHeight="50.0" prefWidth="267.0">
                <font>
-                  <Font name="System Bold" size="15.0" />
+                  <Font name="Berlin Sans FB Demi Bold" size="18.0" />
                </font>
             </Label>
+            <Label fx:id="lbnormal4" layoutX="264.0" layoutY="139.0" prefHeight="100.0" prefWidth="531.0">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="94.0" fitWidth="91.0" layoutX="659.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@penyakit.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
       <Button layoutX="488.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">

@@ -45,7 +45,7 @@ public class ResikoPenyakitController implements Initializable {
     
     
     @FXML
-    private Label lblDiagnosaTekananDarah,lblDiagnosaGulaDarah, lbnormal, lbnormal1, lbnormal2, lbnormal3;
+    private Label lblDiagnosaTekananDarah,lblDiagnosaGulaDarah, lbnormal, lbnormal1, lbnormal2, lbnormal3, lbnormal4;
     
     @FXML
     private TableView tvDaftarPenyakit;
@@ -68,8 +68,9 @@ public class ResikoPenyakitController implements Initializable {
             if(dtd.equals("Normal") && dgd.equals("Normal")){
             tvDaftarPenyakit.setVisible(false);
             lbnormal.setText("Selamat,");
-            lbnormal2.setText("hasil Tekanan Darah dan Gula Darah Anda NORMAL,");
+            lbnormal2.setText("Hasil Tekanan Darah dan Gula Darah Anda NORMAL,");
             lbnormal3.setText("tetap jaga pola hidup Anda!");
+            lbnormal4.setText("Daftar Resiko Penyakit tidak tersedia");
 //            showMessageDialog(null, "SELAMAT hasil Tekanan darah dan Gula darah Anda NORMAL, tetap jaga pola hidup Anda!");
         }
             else{
@@ -77,6 +78,7 @@ public class ResikoPenyakitController implements Initializable {
             lbnormal1.setVisible(false);  
             lbnormal2.setVisible(false);  
             lbnormal3.setVisible(false); 
+            lbnormal4.setVisible(false);
             String sql="SELECT distinct nama_penyakit, gejala FROM resiko_penyakit WHERE diagnosa='"+dtd+"' OR diagnosa='"+dgd+"'";
             Connection con=Db.connectDB();
             Statement stmt=con.createStatement();
