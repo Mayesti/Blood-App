@@ -36,6 +36,9 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <ComboBox fx:id="cbJenis" layoutX="325.0" layoutY="77.0" onAction="#cbJenisOnAction" prefWidth="150.0" />
          </children>
@@ -50,5 +53,29 @@
             <Image url="@blood-donation-pngrepo-com.png" />
          </image>
       </ImageView>
+      <Button layoutX="719.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnLogout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="583.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnUbahPass" style="-fx-background-color: transparent;" text="Ubah Password" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="485.0" layoutY="34.0" mnemonicParsing="false" onAction="#btnEditProfil" style="-fx-background-color: transparent;" text="Edit Profil" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

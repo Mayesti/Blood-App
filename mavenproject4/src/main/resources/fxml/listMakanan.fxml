@@ -15,46 +15,73 @@
          <children>
             <AnchorPane prefHeight="471.0" prefWidth="234.0" style="-fx-background-color: #800000;">
                <children>
-                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="153.0" mnemonicParsing="false" onAction="#listMakanan" prefHeight="50.0" prefWidth="174.0" text="List Makanan">
+                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="153.0" mnemonicParsing="false" onAction="#listMakanan" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="List Makanan">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="228.0" mnemonicParsing="false" onAction="#resikoPenyakit" prefHeight="50.0" prefWidth="174.0" text="Resiko Penyakit">
+                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="228.0" mnemonicParsing="false" onAction="#resikoPenyakit" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Resiko Penyakit">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="302.0" mnemonicParsing="false" onAction="#olahraga" prefHeight="50.0" prefWidth="174.0" text="Olahraga">
+                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="302.0" mnemonicParsing="false" onAction="#olahraga" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Olahraga">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="376.0" mnemonicParsing="false" onAction="#caraPenanganan" prefHeight="50.0" prefWidth="174.0" text="Cara Penanganan">
+                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="376.0" mnemonicParsing="false" onAction="#caraPenanganan" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Cara Penanganan">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="45.0" mnemonicParsing="false" onAction="#riwayat" prefHeight="50.0" prefWidth="174.0" text="Riwayat">
+                  <Button blendMode="SCREEN" layoutX="30.0" layoutY="45.0" mnemonicParsing="false" onAction="#riwayat" prefHeight="50.0" prefWidth="174.0" style="-fx-background-radius: 50;" text="Riwayat">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
                <effect>
                   <DropShadow />
                </effect>
             </AnchorPane>
-            <Label layoutX="428.0" layoutY="26.0" prefHeight="27.0" prefWidth="201.0" text="LIST MAKANAN">
+            <Label layoutX="423.0" layoutY="14.0" prefHeight="27.0" prefWidth="201.0" text="LIST MAKANAN">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
             </Label>
-            <Label layoutX="266.0" layoutY="71.0" text="Diagnosa Tekanan Darah:" />
-            <Label layoutX="296.0" layoutY="98.0" text="Diagnosa Gula Darah:" />
-            <Label fx:id="lblDiagnosaTekananDarah" layoutX="476.0" layoutY="71.0" text="Normal" />
-            <Label fx:id="lblDiagnosaGulaDarah" layoutX="476.0" layoutY="98.0" text="Normal" />
-            <TableView fx:id="tvDaftarMakanan" layoutX="245.0" layoutY="138.0" prefHeight="319.0" prefWidth="548.0">
+            <Label layoutX="259.0" layoutY="71.0" text="Diagnosa Tekanan Darah:">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label layoutX="285.0" layoutY="98.0" text="Diagnosa Gula Darah:">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Label fx:id="lblDiagnosaTekananDarah" layoutX="469.0" layoutY="71.0" text="Normal">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Label fx:id="lblDiagnosaGulaDarah" layoutX="469.0" layoutY="98.0" text="Normal">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <TableView fx:id="tvDaftarMakanan" layoutX="251.0" layoutY="138.0" prefHeight="319.0" prefWidth="536.0">
                <columns>
                   <TableColumn fx:id="colJenisMakanan" prefWidth="154.0" text="Jenis Makanan" />
                   <TableColumn fx:id="colPorsi" prefWidth="88.0" text="Porsi" />
@@ -68,16 +95,25 @@
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button layoutX="586.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnUbahPass" style="-fx-background-color: transparent;" text="Ubah Password" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button layoutX="722.0" layoutY="33.0" mnemonicParsing="false" onAction="#btnLogout" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="7.0" prefHeight="47.0" prefWidth="174.0" text="Blood App" textFill="WHITE">
          <font>
