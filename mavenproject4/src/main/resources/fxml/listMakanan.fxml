@@ -83,10 +83,10 @@
                </font></Label>
             <TableView fx:id="tvDaftarMakanan" layoutX="251.0" layoutY="138.0" prefHeight="319.0" prefWidth="536.0">
                <columns>
-                  <TableColumn fx:id="colJenisMakanan" prefWidth="154.0" text="Jenis Makanan" />
-                  <TableColumn fx:id="colPorsi" prefWidth="88.0" text="Porsi" />
-                  <TableColumn fx:id="colNamaMakanan" prefWidth="139.0" text="Nama Makanan" />
-                  <TableColumn fx:id="colKeterangan" prefWidth="166.0" text="Keterangan" />
+                  <TableColumn fx:id="colJenisMakanan" prefWidth="93.0" text="Jenis Makanan" />
+                  <TableColumn fx:id="colPorsi" prefWidth="85.0" text="Porsi" />
+                  <TableColumn fx:id="colNamaMakanan" prefWidth="104.0" text="Nama Makanan" />
+                  <TableColumn fx:id="colKeterangan" prefWidth="500.0" text="Keterangan" />
                </columns>
             </TableView>
          </children>

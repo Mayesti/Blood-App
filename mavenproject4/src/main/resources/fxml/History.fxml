@@ -13,7 +13,7 @@
    <children>
       <AnchorPane layoutY="66.0" prefHeight="471.0" prefWidth="800.0" style="-fx-background-color: #800000;">
          <children>
-            <Label layoutX="322.0" layoutY="14.0" text="RIWAYAT DATA" textFill="WHITE">
+            <Label layoutX="299.0" layoutY="14.0" text="RIWAYAT DATA" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
@@ -29,11 +29,11 @@
             <TableView fx:id="tvRiwayat" layoutX="38.0" layoutY="146.0" prefHeight="248.0" prefWidth="727.0">
               <columns>
                 <TableColumn fx:id="columnTanggal" prefWidth="106.0" text="Tanggal" />
-                <TableColumn fx:id="columnSistolik" prefWidth="58.0" text="Sistol" />
-                <TableColumn fx:id="columnDiastolik" prefWidth="68.0" text="Diastol" />
-                <TableColumn fx:id="columnPulse" prefWidth="59.0" text="Pulse" />
-                <TableColumn fx:id="columnKadarGulaDarah" prefWidth="103.0" text="Kadar Gula" />
-                <TableColumn fx:id="columnBeratBadan" minWidth="0.0" prefWidth="36.0" text="BB" />
+                <TableColumn fx:id="columnSistolik" prefWidth="66.0" text="Sistol" />
+                <TableColumn fx:id="columnDiastolik" prefWidth="59.0" text="Diastol" />
+                <TableColumn fx:id="columnPulse" prefWidth="60.0" text="Pulse" />
+                <TableColumn fx:id="columnKadarGulaDarah" prefWidth="71.0" text="Kadar Gula" />
+                <TableColumn fx:id="columnBeratBadan" minWidth="0.0" prefWidth="68.0" text="BB" />
                   <TableColumn fx:id="columnDiagnosaTekananDarah" minWidth="0.0" prefWidth="145.0" text="DTD" />
                   <TableColumn fx:id="columnDiagnosaGulaDarah" minWidth="0.0" prefWidth="151.0" text="DGD" />
               </columns>
